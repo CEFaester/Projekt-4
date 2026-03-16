@@ -4,10 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
+        <script src="js/scrolltotop.js" defer></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/svg+xml" href="assets/sindfrivilliglogo.svg">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
-    <!-- FAQ indhold kommer her -->
+        <nav class="navbar">
+            <img src="assets/sindfrivilliglogo.svg" alt="SIND logo" class="navbar__logo">
+            <div class="navbar__menu" id="navbarMenu">
+                <a href="index.html" class="navbar__menu-link">Forside</a>
+                <a href="aktiviteter.html" class="navbar__menu-link">Aktiviteter</a>
+                <a href="om-os.html" class="navbar__menu-link">Om os</a>
+                <a href="faq.html" class="navbar__menu-link">FAQ</a>
+                <a href="kontakt.html" class="navbar__menu-link">Kontakt</a>
+            </div>
+            <div class="navbar__burger" id="burgerMenu" aria-label="Åbn menu" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <!-- FAQ indhold kommer her -->
 </body>
 </html>
+        <footer class="footer">
+            <div class="footer__top">Er du klar til at blive en del af fællesskabet?</div>
+            <div class="footer__sub">SIND har allerede 500+ frivillige, men vi vil gerne have dig med på holdet!</div>
+            <div class="footer__action">
+                <div class="footer__action-text">Klik her og send din ansøgning i dag!</div>
+                <button class="footer__action-btn">Bliv frivillig</button>
+            </div>
+            <div class="footer__help">
+                <h5 class="footer__help-title">Brug for hjælp?</h5>
+                <div class="footer__contact">
+                    <strong>Kontakt os her!</strong><br>
+                    SIND - Landsforeningen for psykisk sundhed<br>
+                    Blekinge Boulevard 2<br>
+                    2630 Taastrup<br><br>
+                    Tlf: 35 24 07 50<br>
+                    Mail: <a href="mailto:landsforeningen@sind.dk" class="footer__contact-mail">landsforeningen@sind.dk</a>
+                </div>
+                <button id="scrollToTopBtn" class="footer__scroll-top-btn" aria-label="Scroll til toppen">
+                    <img src="assets/arrow-up.svg" alt="Op">
+                </button>
+                <div class="footer__icons">
+                    <a href="#" class="footer__icon-link"><img src="assets/facebook.svg" alt="Facebook" class="footer__icon-img"></a>
+                    <a href="#" class="footer__icon-link"><img src="assets/linkedin.svg" alt="LinkedIn" class="footer__icon-img"></a>
+                    <a href="#" class="footer__icon-link"><img src="assets/instagram.svg" alt="Instagram" class="footer__icon-img"></a>
+                </div>
+            </div>
+        </footer>
