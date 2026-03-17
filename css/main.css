@@ -16,8 +16,12 @@ footer {
 }
 /* AKTIVITETER */
 .map-section {
-  margin: 0 auto;
+  padding: 2.5rem 2rem 1.5rem 2rem;
   text-align: center;
+}
+
+.map-section__svg {
+  max-width: 40rem;
 }
 
 .map-section__text {
