@@ -14,6 +14,16 @@ body {
 footer {
   margin-top: auto;
 }
+/* AKTIVITETER */
+.map-section {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.map-section__text {
+  margin: auto;
+  text-align: left;
+}
 
 /* FOOTER */
 .footer {
