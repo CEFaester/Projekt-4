@@ -1,4 +1,4 @@
-// Scroll-to-top functionality for SIND footer
+// Scroll-to-top
 window.addEventListener('DOMContentLoaded', function() {
   const scrollBtn = document.getElementById('scrollToTopBtn');
   if (scrollBtn) {
