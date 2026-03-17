@@ -1,6 +1,10 @@
 /* sikrer at footer altid er i bunden */
 html, body {
   height: 100%;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 body {
   display: flex;
