@@ -262,20 +262,8 @@ footer {
 .navbar__menu-link:hover {
   color: #FF0000;
 }
-.navbar__burger {
-  display: none;
-  flex-direction: column;
-  gap: 6px;
-  cursor: pointer;
-}
-.navbar__burger span {
-  display: block;
-  width: 32px;
-  height: 4px;
-  background: #222;
-  border-radius: 2px;
-  transition: 0.3s;
-}
+
+
 @media (max-width: 600px) {
   .navbar {
     padding: 0.7rem 0.7rem;
@@ -296,9 +284,7 @@ footer {
   .navbar__menu.active {
     display: flex;
   }
-  .navbar__burger {
-    display: flex;
-  }
+
   .navbar__logo {
     height: 40px;
   }
@@ -368,9 +354,7 @@ footer {
   }
   .navbar__menu.active {
     display: flex;
-  }
-  .navbar__burger {
-    display: flex;
+
   }
   .navbar__menu-link {
     font-size: 1.2rem;
