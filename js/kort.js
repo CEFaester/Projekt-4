@@ -12,19 +12,51 @@ const eventsData = [
     { 
         title: "Introaften", 
         region: "hovedstaden", 
-        date: "15. Marts", 
-        description: "Det bliver sjovt",
+        date: "01/03 - 2026", 
+        description: "Vores introaften er en afslappet måde at lære SIND at kende på. <br><br> Her møder du både frivillige og ansatte, som fortæller om: <br><br> • hvad man laver som frivillig <br> • hvilke roller man kan have <br> • hvordan man kommer i gang <br><br> Der er også tid til spørgsmål, snak og kaffe.",
         image: "img/sind__events__introAften.webp", // Stien til dit billede
         icon: "assets/arrow-right.svg"  // Stien til dit ikon
     },
     { 
+        title: "Åben Café", 
+        region: "syddanmark", 
+        date: "12/03 - 2026", 
+        description: "Åben Café er et afslappet mødested med kaffe, spil og små snakke. Her kan du opleve stemningen i SIND og møde både frivillige og brugere i et roligt tempo. Du får en fornemmelse af, hvordan aktiviteterne foregår, og hvordan man kan være med. Du behøver ikke tilmelde dig. Kom og kig forbi.",
+        image: "img/sind__events__coffee.webp",
+        icon: "assets/arrow-right.svg"
+    },
+    { 
+        title: "Walk & Talk", 
+        region: "sjaelland", 
+        date: "16/03 - 2026", 
+        description: "Walk & Talk er en let gåtur, hvor vi taler om frivillighed, fællesskab og alt det, der fylder. Det er en uformel måde at møde os på, hvis du foretrækker bevægelse frem for et mødelokale. Du kan stille spørgsmål undervejs og høre om de forskellige roller. Du behøver ingen forberedelse. Kom og gå med os.",
+        image: "img/sind__events__walkAndTalk.webp",
+        icon: "assets/arrow-right.svg"
+    },
+    { 
+        title: "Frivillig Workshop", 
+        region: "nordjylland", 
+        date: "22/03 - 2026", 
+        description: "Vores frivillig workshop giver et konkret indblik i, hvad rollen som frivillig indebærer. Vi gennemgår opgaver, samarbejde og den støtte, du får som ny. Du møder både ansatte og erfarne frivillige, som deler deres erfaringer. Det er praktisk, jordnært og helt uforpligtende. Kom og se, om det er noget for dig.",
+        image: "img/sind__events__krea.webp",
+        icon: "assets/arrow-right.svg"
+    },
+    { 
         title: "Fællesspisning", 
         region: "nordjylland", 
-        date: "20. Marts", 
-        description: "nam nam",
+        date: "05/03 - 2026", 
+        description: "Vores fællesspisning er en hyggelig måde at møde både frivillige og andre unge på. Vi spiser sammen og taler om hverdagen i SIND, og du får et indblik i, hvordan fællesskabet fungerer. Der er tid til spørgsmål og uformelle snakke. Du behøver ikke kende nogen på forhånd. Kom og vær med.",
         image: "img/sind__events__spisning.webp",
         icon: "assets/arrow-right.svg"
     },
+    { 
+        title: "Introaften", 
+        region: "midtjylland", 
+        date: "01/03 - 2026", 
+        description: "Vores introaften er en afslappet måde at lære SIND at kende på. <br><br> Her møder du både frivillige og ansatte, som fortæller om: <br><br> • hvad man laver som frivillig <br> • hvilke roller man kan have <br> • hvordan man kommer i gang <br><br> Der er også tid til spørgsmål, snak og kaffe.",
+        image: "img/sind__events__introAften.webp", // Stien til dit billede
+        icon: "assets/arrow-right.svg"  // Stien til dit ikon
+    }
 ];
 
 // 3. Få fat i HTML-elementer
