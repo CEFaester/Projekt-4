@@ -27,8 +27,13 @@ const resetBtn = document.querySelector('.map-section__reset-btn');
 // 4. Funktion til at vise alle kort
 function showAllEvents() {
     cardsContainer.innerHTML = '';
+    
+    // Valgfrit: En lille overskrift for at vise, at vi ser hele landet
+    cardsContainer.innerHTML = `<h2 class="map-section__filter-title">Alle events i Danmark</h2>`;
+
     eventsData.forEach(event => {
-        const cardHTML = generateCardHTML(event);
+        // Bemærk: Vi sender nu 'true' med, fordi vi VIL se regionerne på kortene her
+        const cardHTML = generateCardHTML(event, true);
         cardsContainer.insertAdjacentHTML('beforeend', cardHTML);
     });
 }
@@ -45,21 +50,30 @@ function filterEventsByRegion(regionId) {
         // Brug det pæne navn i fejlbeskeden
         cardsContainer.innerHTML = `<p class="map-section__empty-message">Der er ingen events i ${displayName} lige nu.</p>`;
     } else {
+        // NYT: Sæt den store overskrift ind over kortene
+        cardsContainer.innerHTML = `<h2 class="map-section__filter-title">Events i ${displayName}</h2>`;
+
         filteredEvents.forEach(event => {
-            const cardHTML = generateCardHTML(event);
+            // Bemærk: Vi sender nu 'false' med, fordi vi IKKE vil se labels på de enkelte kort
+            const cardHTML = generateCardHTML(event, false);
             cardsContainer.insertAdjacentHTML('beforeend', cardHTML);
         });
     }
 }
 
 // 6. Funktion til at generere HTML for et enkelt kort
-function generateCardHTML(event) {
-    // Slå det pæne navn op i ordbogen baseret på eventets ID (f.eks. "sjaelland" -> "Sjælland")
+// NYT: Vi har tilføjet 'showLabel' som en parameter (den modtager true eller false)
+function generateCardHTML(event, showLabel) {
     const displayName = regionNames[event.region];
 
+    // NYT: En if/else logik bygget som en "ternary operator" (en 1-linjes if-sætning)
+    // Hvis showLabel er sand, returneres span-tagget. Hvis den er falsk, returneres ingenting ('').
+    const labelHTML = showLabel ? `<span class="event-card__label">${displayName}</span>` : '';
+
+    // Vi sætter vores 'labelHTML' variabel ind i stedet for den faste kode
     return `
         <div class="event-card">
-            <span class="event-card__label">${displayName}</span>
+            ${labelHTML}
             <h3 class="event-card__title">${event.title}</h3>
             <p class="event-card__date"><strong>Dato:</strong> ${event.date}</p>
             <p class="event-card__description">${event.description}</p>

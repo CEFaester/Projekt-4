@@ -100,10 +100,21 @@ footer {
   text-align: left;
 }
 
+/* Element: Den dynamiske overskrift der vises over kortene */
+.map-section__filter-title {
+    grid-column: 1 / -1; /* Magien: Får overskriften til at spænde over alle kolonner i vores grid */
+    text-align: left;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 24px;
+    border-bottom: 2px solid #ccc; /* Valgfrit: En lille streg under titlen for at adskille den */
+    padding-bottom: 10px;
+}
+
 /* Element: Regionerne på kortet */
 .map-section__region {
-    fill: #ccc; /* Standardfarven for Danmark */
-    stroke: white; /* Hvid kant mellem regionerne */
+    fill: #333333; /* Standardfarven for Danmark */
+    stroke: white; /* Skal være vores baggrundsfarve */
     stroke-width: 2px;
     cursor: pointer;
     transition: fill 0.3s ease, stroke 0.3s ease;
@@ -111,14 +122,14 @@ footer {
 
 /* Hover-effekt på regionen */
 .map-section__region:hover {
-    fill: #007bff; /* Lyseblå når musen holdes over */
-    stroke: #0056b3;
+    fill: #990000; /* Lyseblå når musen holdes over */
+    stroke: #990000;
 }
 
 /* MODIFIER: Den region der er klikket på */
 .map-section__region--active {
-    fill: #0056b3; /* Mørkeblå for at vise den er valgt */
-    stroke: #003d82;
+    fill: #cc0000; /* Mørkeblå for at vise den er valgt */
+    stroke: white;
 }
 
 /* Element: Knappen til at nulstille */
@@ -138,6 +149,64 @@ footer {
     background-color: #555;
 }
 
+/* Element: Beholderen til event-kortene */
+.map-section__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* Element: Beskeden der vises, hvis en region er tom */
+.map-section__empty-message {
+    grid-column: 1 / -1; /* Får beskeden til at fylde hele bredden i vores grid */
+    font-style: italic;
+    color: #666;
+    font-size: 18px;
+}
+
+.event-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Løfter kortet en lille smule, når man holder musen over det */
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.event-card__label {
+    background-color: #007bff;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-transform: capitalize; /* Sikrer at første bogstav altid er stort */
+}
+
+.event-card__title {
+    margin-top: 0;
+    color: #333;
+    font-size: 20px;
+}
+
+.event-card__date {
+    color: #666;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.event-card__description {
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
 
 /* FOOTER */
 .footer {
