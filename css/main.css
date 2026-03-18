@@ -136,17 +136,21 @@ footer {
 .map-section__reset-btn {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #007f24;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 14px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     transition: background-color 0.3s ease;
 }
 
 .map-section__reset-btn:hover {
-    background-color: #555;
+  background-color: #198754;
 }
 
 /* Element: Beholderen til event-kortene */
