@@ -7,7 +7,7 @@ const regionNames = {
     "nordjylland": "Nordjylland"
 };
 
-// 2. Data: Bemærk at 'region' nu bruger de små, sikre ID'er
+// 2.
 const eventsData = [
     { 
         title: "Introaften", 
