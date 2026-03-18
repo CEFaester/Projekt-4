@@ -100,25 +100,99 @@ footer {
   text-align: left;
 }
 
-/* Element: Regionerne på kortet */
+/* =========================================
+   KORTETS FORMER OG HOVER EFFEKTER
+   ========================================= */
+
+/* Dette sikrer, at alt i gruppen er klikbart, og at musen skifter til en hånd */
 .map-section__region {
-    fill: #b3b3b3; /* Standardfarven for Danmark */
-    stroke: white; /* Skal være vores baggrundsfarve */
-    stroke-width: 2px;
     cursor: pointer;
+}
+
+/* Dette er selve landmassen (formen fra Illustrator) */
+.map-section__shape {
+    fill: #ccc;
+    stroke: white;
+    stroke-width: 2px;
     transition: fill 0.3s ease, stroke 0.3s ease;
 }
 
-/* Hover-effekt på regionen */
-.map-section__region:hover {
-    fill: #cc0000; /* Lyseblå når musen holdes over */
-    stroke: #cc0000;
+/* Når man holder musen over HELE gruppen (inkl. boksen), skifter KUN landmassen farve */
+.map-section__region:hover .map-section__shape {
+    fill: #007bff;
+    stroke: #0056b3;
 }
 
-/* MODIFIER: Den region der er klikket på */
-.map-section__region--active {
-    fill: #007f24; /* Mørkeblå for at vise den er valgt */
-    stroke: white;
+/* Når JS tilføjer 'active' klassen til gruppen, skifter landmassen farve */
+.map-section__region--active .map-section__shape {
+    fill: #0056b3;
+    stroke: #003d82;
+}
+
+/* =========================================
+   LABEL DESIGN (Boks, Streg, Tekst, Ikon)
+   ========================================= */
+
+/* Sørger for at labelen ikke forstyrrer musens hover-effekt på landmassen under den */
+.map-section__label-group {
+    pointer-events: none; 
+}
+
+/* Stregen fra boksen til punktet */
+.map-section__label-line {
+    stroke: #333; /* Stregens farve */
+    stroke-width: 2px;
+    stroke-dasharray: 4; /* Gør stregen stiplet (valgfrit - slet for en solid streg) */
+}
+
+/* Selve boksen bag teksten */
+.map-section__label-box {
+    fill: white;
+    stroke: #333;
+    stroke-width: 2px;
+    /* Skygge på SVG elementer laves med filter, men et solidt design er ofte pænest */
+}
+
+/* Teksten inde i boksen */
+.map-section__label-text {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    fill: #333;
+    text-anchor: middle; /* Centrerer teksten omkring sit X-koordinat */
+    dominant-baseline: middle; /* Centrerer teksten vertikalt omkring sit Y-koordinat */
+}
+
+/* (Ikonet kræver som regel ingen CSS, da dets størrelse og placering styres direkte i HTML'en) */
+
+/* Element: Knappen til at nulstille */
+.map-section__reset-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.map-section__reset-btn:hover {
+    background-color: #555;
+}
+
+/* Element: Teksten inde i selve SVG-kortet */
+.map-section__map-text {
+    font-size: 3rem;
+    font-weight: bold;
+    stroke: none;
+    fill: black; /* Tekstfarven */
+    text-anchor: middle; /* Sørger for at teksten er centreret omkring X og Y koordinaterne */
+    
+    /* MEGET VIGTIGT: Dette lader browseren klikke "igennem" teksten 
+       og direkte ned på selve <path>-formen under den, så hover-effekten virker glidende */
+    pointer-events: none; 
 }
 
 
