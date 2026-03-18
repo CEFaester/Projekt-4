@@ -166,46 +166,93 @@ footer {
 
 .event-card {
     background-color: white;
-    padding: 20px;
+    
+    /* ÆNDRING: Vi fjerner padding i toppen og siderne her, 
+       og flytter padding ned på tekst-elementerne i stedet */
+    padding: 0 0 15px 0; 
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    /* NYT: Vigtig for at vi kan placere mærkatet ovenpå billedet */
+    position: relative; 
+    overflow: hidden; /* Sikrer at billedets hjørner bliver runde i toppen */
 }
 
-/* Løfter kortet en lille smule, når man holder musen over det */
 .event-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Element: Billedet øverst */
+.event-card__image {
+    width: 100%;
+    height: 180px; /* Fast højde */
+    object-fit: cover; /* Pæn beskæring */
+    display: block;
+    margin-bottom: 15px; /* Luft ned til titlen */
+}
+
+/* Element: Mærkatet (Label) */
 .event-card__label {
     background-color: #007bff;
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
     font-size: 12px;
-    display: inline-block;
-    margin-bottom: 10px;
-    text-transform: capitalize; /* Sikrer at første bogstav altid er stort */
+    text-transform: capitalize;
 }
 
+/* MODIFIER: Placering ovenpå billedet */
+.event-card__label--on-image {
+    position: absolute; /* Tager elementet ud af det normale flow */
+    top: 10px; /* 10px fra toppen af kortet */
+    left: 10px; /* 10px fra venstre side af kortet */
+    z-index: 10; /* Sikrer at det ligger *over* billedet */
+}
+
+/* Element: Venstrestillet Titel */
 .event-card__title {
     margin-top: 0;
     color: #333;
     font-size: 20px;
+    padding: 0 15px; /* Luft i siderne */
+    margin-bottom: 5px;
 }
 
-.event-card__date {
-    color: #666;
-    margin-bottom: 8px;
-    font-size: 14px;
-}
-
+/* Element: Venstrestillet Beskrivelse */
 .event-card__description {
     color: #444;
     line-height: 1.5;
-    margin-bottom: 0;
+    font-size: 14px;
+    padding: 0 15px; /* Luft i siderne */
+    margin-bottom: 15px; /* Luft ned til bunden */
+}
+
+/* Element: Bunden af kortet (Footer) */
+.event-card__footer {
+    display: flex; /* Gør bunden til en flexbox */
+    justify-content: space-between; /* Tvinger indholdet til venstre og højre */
+    align-items: center; /* Centrerer dem vertikalt */
+    padding: 0 15px; /* Luft i siderne */
+    border-top: 1px solid #eee; /* Valgfrit: En lille streg for at adskille bunden */
+    padding-top: 10px;
+}
+
+/* Element: Datoen i bunden til venstre */
+.event-card__date {
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Element: Ikonet i bunden til højre */
+.event-card__icon {
+    width: 20px; /* Størrelsen på ikonet */
+    height: 20px;
+    object-fit: contain; /* Sørger for at ikonet altid er helt synligt */
 }
 
 /* FOOTER */

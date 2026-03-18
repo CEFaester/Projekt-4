@@ -9,14 +9,22 @@ const regionNames = {
 
 // 2. Data: Bemærk at 'region' nu bruger de små, sikre ID'er
 const eventsData = [
-    { title: "Kulturnat i København", region: "hovedstaden", date: "15. Marts", description: "En aften med masser af kulturelle oplevelser." },
-    { title: "Strandfest i Helsingør", region: "hovedstaden", date: "20. Marts", description: "Musik, dans og sjov på stranden." },
-    { title: "Vandretur på Møns Klint", region: "sjaelland", date: "18. Marts", description: "Oplev den smukke natur og den betagende udsigt." },
-    { title: "Lego House Besøg", region: "syddanmark", date: "12. Marts", description: "Sjov og læring for hele familien." },
-    { title: "Musikevent i Odense", region: "syddanmark", date: "22. Marts", description: "Live musik fra danske kunstnere." },
-    { title: "Aarhus Festuge", region: "midtjylland", date: "28. Marts", description: "Danmarks største kulturfestival." },
-    { title: "Kunstbyvandring", region: "nordjylland", date: "16. Marts", description: "Opdag de skjulte perler i Aalborg." },
-    { title: "Smag på Himmerland", region: "nordjylland", date: "25. Marts", description: "Prøv lokale delikatesser." }
+    { 
+        title: "Introaften", 
+        region: "hovedstaden", 
+        date: "15. Marts", 
+        description: "Det bliver sjovt",
+        image: "img/sind__events__introAften.webp", // Stien til dit billede
+        icon: "assets/arrow-right.svg"  // Stien til dit ikon
+    },
+    { 
+        title: "Fællesspisning", 
+        region: "nordjylland", 
+        date: "20. Marts", 
+        description: "nam nam",
+        image: "img/sind__events__spisning.webp",
+        icon: "assets/arrow-right.svg"
+    },
 ];
 
 // 3. Få fat i HTML-elementer
@@ -62,21 +70,28 @@ function filterEventsByRegion(regionId) {
 }
 
 // 6. Funktion til at generere HTML for et enkelt kort
-// NYT: Vi har tilføjet 'showLabel' som en parameter (den modtager true eller false)
+// NYT: showLabel parameteren modtager true eller false
 function generateCardHTML(event, showLabel) {
     const displayName = regionNames[event.region];
 
-    // NYT: En if/else logik bygget som en "ternary operator" (en 1-linjes if-sætning)
-    // Hvis showLabel er sand, returneres span-tagget. Hvis den er falsk, returneres ingenting ('').
-    const labelHTML = showLabel ? `<span class="event-card__label">${displayName}</span>` : '';
+    // NYT: Vi bygger billedet først.
+    const imageHTML = `<img src="${event.image}" alt="${event.title}" class="event-card__image">`;
 
-    // Vi sætter vores 'labelHTML' variabel ind i stedet for den faste kode
+    // NYT: Mærkatet (label) skal have en specifik klasse for placering.
+    const labelHTML = showLabel ? `<span class="event-card__label event-card__label--on-image">${displayName}</span>` : '';
+
+    // Vi bygger kortet med den præcise rækkefølge
     return `
         <div class="event-card">
-            ${labelHTML}
-            <h3 class="event-card__title">${event.title}</h3>
-            <p class="event-card__date"><strong>Dato:</strong> ${event.date}</p>
+            ${imageHTML}
+            ${labelHTML} <h3 class="event-card__title">${event.title}</h3>
+            
             <p class="event-card__description">${event.description}</p>
+            
+            <div class="event-card__footer">
+                <p class="event-card__date">${event.date}</p>
+                <img src="${event.icon}" alt="Ikon for ${event.title}" class="event-card__icon">
+            </div>
         </div>
     `;
 }
