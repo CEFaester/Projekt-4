@@ -170,7 +170,9 @@ footer {
     /* ÆNDRING: Vi fjerner padding i toppen og siderne her, 
        og flytter padding ned på tekst-elementerne i stedet */
     padding: 0 0 15px 0; 
-    border-radius: 8px;
+    width: 294px;
+    margin: auto;
+    border-radius: 6px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -178,6 +180,10 @@ footer {
     /* NYT: Vigtig for at vi kan placere mærkatet ovenpå billedet */
     position: relative; 
     overflow: hidden; /* Sikrer at billedets hjørner bliver runde i toppen */
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .event-card:hover {
@@ -196,7 +202,7 @@ footer {
 
 /* Element: Mærkatet (Label) */
 .event-card__label {
-    background-color: #007bff;
+    background-color: #990000;
     color: white;
     padding: 4px 8px;
     border-radius: 4px;
@@ -238,6 +244,7 @@ footer {
     padding: 0 15px; /* Luft i siderne */
     border-top: 1px solid #eee; /* Valgfrit: En lille streg for at adskille bunden */
     padding-top: 10px;
+    margin-top: auto;
 }
 
 /* Element: Datoen i bunden til venstre */
@@ -250,8 +257,8 @@ footer {
 
 /* Element: Ikonet i bunden til højre */
 .event-card__icon {
-    width: 20px; /* Størrelsen på ikonet */
-    height: 20px;
+    width: 50px; /* Størrelsen på ikonet */
+    height: 50px;
     object-fit: contain; /* Sørger for at ikonet altid er helt synligt */
 }
 
