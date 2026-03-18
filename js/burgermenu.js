@@ -2,7 +2,7 @@
 /* burger menu funktionalitet */
 const menuItems = [
     { menuName: 'Forside', link: 'index.html' },
-    { menuName: 'Events', link: 'aktiviteter.html' },
+    { menuName: 'Events', link: 'events.html' },
     { menuName: 'Om os', link: 'om-os.html' },
     { menuName: 'FAQ', link: 'faq.html' },
     { menuName: 'Kontakt', link: 'kontakt.html' }
