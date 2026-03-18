@@ -11,9 +11,80 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+
 footer {
   margin-top: auto;
 }
+
+
+/* --- NAVIGATION BAR --- */
+.navbar {
+  position: relative;
+  background: #fff;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1.2rem;
+  min-height: 60px;
+}
+.navbar__burger {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+  width: 24px;
+  height: 24px;
+}
+.navbar__burger-line {
+  display: block;
+  width: 24px;
+  height: 3px;
+  margin: 0;
+  background: #333;
+  position: absolute;
+  left: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.navbar__burger-line:nth-child(1) {
+  top: 3px;
+}
+.navbar__burger-line:nth-child(2) {
+  top: 10px;
+}
+.navbar__burger-line:nth-child(3) {
+  top: 17px;
+}
+.navbar__burger.active .navbar__burger-line:nth-child(1) {
+  top: 10px;
+  transform: rotate(45deg);
+}
+.navbar__burger.active .navbar__burger-line:nth-child(2) {
+  opacity: 0;
+}
+.navbar__burger.active .navbar__burger-line:nth-child(3) {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+.navbar__menu {
+  display: flex;
+  gap: 1.5rem;
+}
+.navbar__menu-link {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.navbar__menu-link:hover {
+  color: #FF0000;
+}
+
+
 /* AKTIVITETER */
 .map-section {
   padding: 2.5rem 2rem 1.5rem 2rem;
@@ -29,10 +100,11 @@ footer {
   text-align: left;
 }
 
+
 /* FOOTER */
 .footer {
   background: #f7fcfa;
-  color: #222;
+  color: #333;
   padding: 2.5rem 2rem 1.5rem 2rem;
   text-align: left;
   border-top: 2px solid #0f726b;
@@ -216,61 +288,16 @@ footer {
   }
 }
 
-/* --- NAVIGATION BAR --- */
-.navbar {
-  background: #fff;
-  color: #222;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.7rem 1.2rem;
-  min-height: 60px;
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-  .navbar__logo {
-    height: 170px;
-    width: auto;
-    display: block;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .navbar__logo {
-    height: 90px;
-    width: auto;
-    display: block;
-  }
-}
-@media (min-width: 320px) and (max-width: 480px) {
-  .navbar__logo {
-    height: 64px;
-    width: auto;
-    display: block;
-  }
-}
-.navbar__menu {
-  display: flex;
-  gap: 1.5rem;
-}
-.navbar__menu-link {
-  color: #222;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: color 0.2s;
-}
-.navbar__menu-link:hover {
-  color: #FF0000;
-}
-
-
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .navbar {
     padding: 0.7rem 0.7rem;
   }
+  .navbar__burger {
+    display: block;
+  }
   .navbar__menu {
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
     right: 0;
     background: #fff;
@@ -284,13 +311,8 @@ footer {
   .navbar__menu.active {
     display: flex;
   }
-
-  .navbar__logo {
-    height: 40px;
-  }
   .navbar__menu-link {
     font-size: 1.2rem;
-    color: #222;
     padding: 0.5rem 0;
     border-bottom: 1px solid #eee;
   }
@@ -303,6 +325,7 @@ footer {
 @media (min-width: 901px) {
   .navbar__logo {
     height: 170px;
+    max-height: none;
     width: auto;
     display: block;
   }
@@ -310,9 +333,15 @@ footer {
 }
 
 /* --- TABLET --- */
-@media (max-width: 900px) and (min-width: 601px) {
+@media (min-width: 481px) and (max-width: 900px) {
+  .navbar {
+    min-height: 90px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
   .navbar__logo {
     height: 90px;
+    max-height: none;
     width: auto;
     display: block;
   }
@@ -334,87 +363,7 @@ footer {
 }
 
 /* --- MOBIL --- */
-@media (min-width: 320px) and (max-width: 480px) {
-
-  .navbar {
-    padding: 0.7rem 0.7rem;
-  }
-  .navbar__menu {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background: #fff;
-    flex-direction: column;
-    gap: 0.7rem;
-    padding: 1.2rem 0.7rem;
-    display: none;
-    z-index: 99;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  }
-  .navbar__menu.active {
-    display: flex;
-
-  }
-  .navbar__menu-link {
-    font-size: 1.2rem;
-    color: #222;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
-  }
-  .navbar__menu-link:last-child {
-    border-bottom: none;
-  }
-}
-
-/* --- DESKTOP --- */
-@media (min-width: 481px) and (max-width: 768px) {
-
-  .footer__scroll-top-btn {
-    right: 1.2rem;
-    bottom: 1.2rem;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-  }
-  .footer__icons {
-    gap: 1rem;
-  }
-  .footer__icon-link {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-  }
-}
-
-/* --- DESKTOP --- */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .navbar {
-    min-height: 170px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
-  .navbar__logo {
-    height: 170px;
-    max-height: none;
-    width: auto;
-    display: block;
-  }
-}
-@media (min-width: 481px) and (max-width: 768px) {
-  .navbar {
-    min-height: 90px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-  .navbar__logo {
-    height: 90px;
-    max-height: none;
-    width: auto;
-    display: block;
-  }
-}
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
   .navbar {
     min-height: 64px;
     padding-top: 8px;

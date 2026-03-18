@@ -7,8 +7,8 @@
 
     <title>Kontakt</title>
 
-        <script src="js/scrolltotop.js" defer></script>
-        <script src="js/burgermenu.js" defer></script>
+    <script src="js/scrolltotop.js" defer></script>
+    <script src="js/burgermenu.js" defer></script>
         
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/svg+xml" href="assets/sindfrivilliglogo.svg">
@@ -19,10 +19,17 @@
 </head>
 <body>
         <nav class="navbar">
-            <img src="assets/sindfrivilliglogo.svg" alt="SIND logo" class="navbar__logo">
+            <a href="index.html">
+                <img src="assets/sindfrivilliglogo.svg" alt="SIND logo" class="navbar__logo">
+            </a>
+            <button class="navbar__burger" id="navbarBurger" aria-label="Åbn menu">
+                <span class="navbar__burger-line"></span>
+                <span class="navbar__burger-line"></span>
+                <span class="navbar__burger-line"></span>
+            </button>
             <div class="navbar__menu" id="navbarMenu">
                 <a href="index.html" class="navbar__menu-link">Forside</a>
-                <a href="aktiviteter.html" class="navbar__menu-link">Aktiviteter</a>
+                <a href="aktiviteter.html" class="navbar__menu-link">Events</a>
                 <a href="om-os.html" class="navbar__menu-link">Om os</a>
                 <a href="faq.html" class="navbar__menu-link">FAQ</a>
                 <a href="kontakt.html" class="navbar__menu-link">Kontakt</a>
