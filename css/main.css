@@ -3,7 +3,6 @@
    ========================================= */
 
 html, body {
-  height: 100%;
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
@@ -133,16 +132,6 @@ footer {
   text-align: left;
 }
 
-.map-section__filter-title {
-    grid-column: 1 / -1; 
-    text-align: left;
-    color: #333;
-    margin-bottom: 10px;
-    font-size: 24px;
-    border-bottom: 2px solid #ccc; 
-    padding-bottom: 10px;
-}
-
 .map-section__region {
     fill: #333333; 
     stroke: white; 
@@ -178,14 +167,29 @@ footer {
 .map-section__reset-btn:hover {
   background-color: #198754;
 }
+/* Element: Den dynamiske overskrift der nu ligger OVER kortene */
+.map-section__filter-title {
+    text-align: left;
+    color: #333;
+    font-size: 24px;
+    border-bottom: 2px solid #ccc; 
+    padding-bottom: 10px;
+    
+    /* NYT: Vi flytter luften herop! */
+    margin-top: 40px; 
+    margin-bottom: 20px;
+}
 
 /* Event Kort Container (Mobil-først: Swipe Carousel) */
 .map-section__cards {
+    /* (margin-top: 40px er slettet herfra, da titlen nu skubber nedad) */
+    padding-top: 10px; /* Beholder den lille luft i toppen til hover-effekten */
+    align-items: stretch;
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     gap: 15px;
-    padding-bottom: 20px;
+    padding-bottom: 20px; 
     scrollbar-width: none; 
 }
 
@@ -212,9 +216,11 @@ footer {
     overflow: hidden; 
     display: flex;
     flex-direction: column;
-    height: 100%;
     
-    /* Mobil: Fylder 85% af skærmen for at indikere swipe */
+    /* NYT: Tvinger kortet til at være mindst 350px højt, 
+       så vi kan se om problemet er CSS eller tomt indhold */
+    min-height: 350px; 
+    
     flex: 0 0 85%;
     scroll-snap-align: start;
 }
@@ -226,7 +232,14 @@ footer {
 
 .event-card__image {
     width: 100%;
+    
+    /* NYT: Disse tre linjer tvinger billedet til at forblive 180px højt, 
+       selvom linket er tomt, eller Flexbox prøver at klemme det fladt! */
     height: 180px; 
+    min-height: 180px; 
+    flex-shrink: 0; 
+    background-color: #e0e0e0; /* Giver en pæn grå kasse, indtil dit billede loader */
+
     object-fit: cover; 
     display: block;
     margin-bottom: 15px; 
@@ -495,20 +508,23 @@ footer {
     border-bottom: none;
   }
 
-  /* --- Event Kort --- */
-  .map-section__cards {
-    display: grid; /* Skift fra swipe-karrusel til gitter */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    overflow-x: visible; 
-    scroll-snap-type: none;
-  }
+  /* --- Event cards & Map --- */
 
-  .event-card {
-    flex: auto; /* Fjern 85% bredde, lad griddet styre størrelsen */
-    width: 294px; /* Beholder din ønskede faste bredde på desktop */
-    margin: auto;
-  }
+  /* Ændr beholderen tilbage til Grid */
+    .map-section__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        overflow-x: visible; /* Slå horisontal scroll fra */
+        scroll-snap-type: none; /* Slå snap-effekten fra */
+    }
+
+    /* Fjern den faste bredde på 85%, så kortene nu styres af Griddet */
+    .event-card {
+        flex: auto; /* Slår mobil-bredden på 85% fra */
+        width: 294px; /* Din faste desktop-bredde */
+        margin: 0 auto; /* Centrerer kortet pænt i sin grid-kolonne */
+    }
 
   /* --- Footer & Scroll Top --- */
   .footer__icons {

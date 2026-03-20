@@ -63,13 +63,15 @@ const eventsData = [
 const regions = document.querySelectorAll('.map-section__region'); 
 const cardsContainer = document.querySelector('.map-section__cards');
 const resetBtn = document.querySelector('.map-section__reset-btn');
+const dynamicTitle = document.getElementById('dynamic-filter-title');
 
 // 4. Funktion til at vise alle kort
 function showAllEvents() {
     cardsContainer.innerHTML = '';
     
     // Valgfrit: En lille overskrift for at vise, at vi ser hele landet
-    cardsContainer.innerHTML = `<h2 class="map-section__filter-title">Alle events i Danmark</h2>`;
+    dynamicTitle.innerText = "Alle events i Danmark";
+    dynamicTitle.style.display = "block"; // Sørg for at den er synlig
 
     eventsData.forEach(event => {
         // Bemærk: Vi sender nu 'true' med, fordi vi VIL se regionerne på kortene her
@@ -83,18 +85,18 @@ function filterEventsByRegion(regionId) {
     cardsContainer.innerHTML = '';
     const filteredEvents = eventsData.filter(event => event.region === regionId);
     
-    // Slå det pæne navn op i vores ordbog
     const displayName = regionNames[regionId]; 
     
     if (filteredEvents.length === 0) {
-        // Brug det pæne navn i fejlbeskeden
+        // Skjul overskriften, hvis der ingen events er (valgfrit)
+        dynamicTitle.style.display = "none";
         cardsContainer.innerHTML = `<p class="map-section__empty-message">Der er ingen events i ${displayName} lige nu.</p>`;
     } else {
-        // NYT: Sæt den store overskrift ind over kortene
-        cardsContainer.innerHTML = `<h2 class="map-section__filter-title">Events i ${displayName}</h2>`;
+        // NYT: Opdater teksten i den faste overskrift
+        dynamicTitle.innerText = `Events i ${displayName}`;
+        dynamicTitle.style.display = "block"; // Sørg for at den er synlig
 
         filteredEvents.forEach(event => {
-            // Bemærk: Vi sender nu 'false' med, fordi vi IKKE vil se labels på de enkelte kort
             const cardHTML = generateCardHTML(event, false);
             cardsContainer.insertAdjacentHTML('beforeend', cardHTML);
         });
