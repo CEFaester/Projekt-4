@@ -123,6 +123,10 @@ footer {
   text-align: center;
 }
 
+.map-section__title{
+  color: #CC0000;
+}
+
 .map-section__svg {
   max-width: 40rem;
 }
