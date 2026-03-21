@@ -302,6 +302,76 @@ footer {
 }
 
 /* =========================================
+   BLOK: faq-section
+   ========================================= */
+.faq-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: "Nunito", sans-serif;
+}
+
+.faq-section__title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.faq-section__item {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+/* Element: Selve spørgsmålet man trykker på */
+.faq-section__question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+    
+    /* Fjerner standard-pilen som browsere sætter ind */
+    list-style: none; 
+}
+
+/* Fjerner standard-pilen i Safari/Chrome specifikt */
+.faq-section__question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-section__question:hover {
+    color: #990000;
+}
+
+/* Element: Svar-teksten */
+.faq-section__answer {
+    padding: 10px 0 20px 0;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Element: Plus-ikonet */
+.faq-section__icon {
+    font-size: 1.8rem;
+    font-weight: 300;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* =========================================
+   MAGIEN: Når boksen er åben (HTML5 tilføjer automatisk 'open')
+   ========================================= */
+
+/* Roter ikonet 45 grader så '+' bliver til 'x', når details er åben */
+details[open] .faq-section__icon {
+    transform: rotate(45deg);
+    color: #990000;
+}
+
+/* =========================================
    FOOTER (Mobil visning)
    ========================================= */
 .footer {
