@@ -310,14 +310,16 @@ footer {
   font-family: "Nunito", sans-serif;
 }
 
+.faq-top__title{
+  color: #CC0000;
+}
+
 .faq-top__text {
   text-align: left;
 }
 
-.faq-section__title {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
+.faq-section {
+    text-align: left;
 }
 
 /* Containeren der holder alle boksene */
@@ -331,7 +333,7 @@ footer {
 .faq-section__item {
     background-color: white;
     border: 1px solid #eee;
-    border-radius: 8px; /* Runde hjørner */
+    border-radius: 6px; /* Runde hjørner */
     padding: 0 20px; /* Luft i siderne indeni boksen */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* En meget svag, professionel skygge */
     transition: box-shadow 0.3s ease;
@@ -349,7 +351,7 @@ footer {
     align-items: center;
     font-size: 1.1rem;
     font-weight: bold;
-    color: #333;
+    color: #CC0000;
     cursor: pointer;
     padding: 20px 0; /* Skaber luft i toppen og bunden af spørgsmålet */
     transition: color 0.3s ease;
@@ -387,7 +389,6 @@ details[open] .faq-section__icon {
     transform: rotate(45deg);
     color: #990000;
 }
-
 /* =========================================
    MAGIEN: Når boksen er åben (HTML5 tilføjer automatisk 'open')
    ========================================= */
