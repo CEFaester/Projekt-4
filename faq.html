@@ -9,6 +9,7 @@
 
     <script src="js/scrolltotop.js" defer></script>
     <script src="js/burgermenu.js" defer></script>
+    <script src="js/faq.js" defer></script>
         
     <link rel="stylesheet" href="css/main.css">
     <link rel="icon" type="image/svg+xml" href="assets/sindfrivilliglogo.svg">
@@ -18,25 +19,122 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-        <nav class="navbar">
-            <a href="index.html">
-                <img src="assets/sindfrivilliglogo.svg" alt="SIND logo" class="navbar__logo">
-            </a>
-            <button class="navbar__burger" id="navbarBurger" aria-label="Åbn menu">
-                <span class="navbar__burger-line"></span>
-                <span class="navbar__burger-line"></span>
-                <span class="navbar__burger-line"></span>
-            </button>
-            <div class="navbar__menu" id="navbarMenu">
-                <a href="index.html" class="navbar__menu-link">Forside</a>
-                <a href="events.html" class="navbar__menu-link">Events</a>
-                <a href="om-os.html" class="navbar__menu-link">Om os</a>
-                <a href="faq.html" class="navbar__menu-link">FAQ</a>
-                <a href="kontakt.html" class="navbar__menu-link">Kontakt</a>
-            </div>
+    <nav class="navbar">
+        <a href="index.html">
+            <img src="assets/sindfrivilliglogo.svg" alt="SIND logo" class="navbar__logo">
+        </a>
+        <button class="navbar__burger" id="navbarBurger" aria-label="Åbn menu">
+            <span class="navbar__burger-line"></span>
+            <span class="navbar__burger-line"></span>
+            <span class="navbar__burger-line"></span>
+        </button>
+        <div class="navbar__menu" id="navbarMenu">
+            <a href="index.html" class="navbar__menu-link">Forside</a>
+            <a href="events.html" class="navbar__menu-link">Events</a>
+            <a href="om-os.html" class="navbar__menu-link">Om os</a>
+            <a href="faq.html" class="navbar__menu-link">FAQ</a>
+            <a href="kontakt.html" class="navbar__menu-link">Kontakt</a>
+        </div>
+    </nav>
 
-        </nav>
-        <!-- FAQ indhold kommer her -->
+    <section class="faq-top">
+        <h1 class="faq-top__title">FAQ</h1>
+        <p class="faq-top__text">Har du spørgsmål om at være frivillig hos SIND? <br> Her har vi samlet svar på nogle af de spørgsmål, som vi hyppigst får. Hvis du ikke finder det, du søger, er du altid velkommen til at kontakte os.</p>
+    </section>
+
+    <section class="faq-section">
+        <h2 class="faq-section__title">Ofte Stillede Spørgsmål</h2>
+        
+        <div class="faq-section__container">
+            <details class="faq-section__item">
+                <summary class="faq-section__question">
+                    Skal jeg have erfaring for at være frivillig?
+                    <span class="faq-section__icon">+</span>
+                </summary>
+                <div class="faq-section__answer">
+                    <p>Meget godt svar lige her</p>
+                </div>
+            </details>
+
+            <details class="faq-section__item">
+                <summary class="faq-section__question">
+                    Hvor meget tid skal jeg bruge?
+                    <span class="faq-section__icon">+</span>
+                </summary>
+                <div class="faq-section__answer">
+                    <p>Det bestemmer du selv. Mange bruger 1-5 timer om ugen, men du kan også hjælpe en gang imellem.</p>
+                </div>
+            </details>
+
+                    <div class="faq-section__container">
+            <details class="faq-section__item">
+                <summary class="faq-section__question">
+                    Kan jeg prøve det af først?
+                    <span class="faq-section__icon">+</span>
+                </summary>
+                <div class="faq-section__answer">
+                    <p>Meget godt svar lige her</p>
+                </div>
+            </details>
+
+                    <div class="faq-section__container">
+            <details class="faq-section__item">
+                <summary class="faq-section__question">
+                    Får jeg oplæring?
+                    <span class="faq-section__icon">+</span>
+                </summary>
+                <div class="faq-section__answer">
+                    <p>Meget godt svar lige her</p>
+                </div>
+            </details>
+
+                    <div class="faq-section__container">
+            <details class="faq-section__item">
+                <summary class="faq-section__question">
+                    Kan jeg være frivillig sammen med en ven?
+                    <span class="faq-section__icon">+</span>
+                </summary>
+                <div class="faq-section__answer">
+                    <p>Meget godt svar lige her</p>
+                </div>
+            </details>
+
+                    <div class="faq-section__container">
+            <details class="faq-section__item">
+                <summary class="faq-section__question">
+                    Hvad hvis jeg bliver i tvivl undervejs?
+                    <span class="faq-section__icon">+</span>
+                </summary>
+                <div class="faq-section__answer">
+                    <p>Du står aldrig alene. Du kan altid tale med de andre frivillige eller en koordinator.</p>
+                </div>
+            </details>
+
+                    <div class="faq-section__container">
+            <details class="faq-section__item">
+                <summary class="faq-section__question">
+                    Kan jeg stoppe igen, hvis det ikke passer mig?
+                    <span class="faq-section__icon">+</span>
+                </summary>
+                <div class="faq-section__answer">
+                    <p>Meget godt svar lige her</p>
+                </div>
+            </details>
+
+                    <div class="faq-section__container">
+            <details class="faq-section__item">
+                <summary class="faq-section__question">
+                    Hvad får jeg ud af at være frivillig?
+                    <span class="faq-section__icon">+</span>
+                </summary>
+                <div class="faq-section__answer">
+                    <p>Meget godt svar lige her</p>
+                </div>
+            </details>
+            
+        </div>
+    </section>
+
         <footer class="footer">
             <div class="footer__top">Er du klar til at blive en del af fællesskabet?</div>
             <div class="footer__sub">SIND har allerede 500+ frivillige, men vi vil gerne have dig med på holdet!</div>
