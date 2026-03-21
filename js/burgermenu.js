@@ -1,11 +1,12 @@
 
-/* burger menu funktionalitet */
+/* burger menu navigation */
 const menuItems = [
     { menuName: 'Forside', link: 'index.html' },
     { menuName: 'Events', link: 'events.html' },
     { menuName: 'Om os', link: 'om-os.html' },
     { menuName: 'FAQ', link: 'faq.html' },
-    { menuName: 'Kontakt', link: 'kontakt.html' }
+    { menuName: 'Kontakt', link: 'kontakt.html' },
+    { menuName: 'Bliv frivillig', link: '#' }
 ];
 
 const navbarMenu = document.getElementById('navbarMenu');
