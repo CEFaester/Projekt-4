@@ -304,11 +304,14 @@ footer {
 /* =========================================
    BLOK: faq-section
    ========================================= */
-.faq-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-    font-family: "Nunito", sans-serif;
+.faq-top, .faq-section {
+  padding: 1rem 2rem 1rem 2rem;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+
+.faq-top__text {
+  text-align: left;
 }
 
 .faq-section__title {
@@ -317,9 +320,26 @@ footer {
     margin-bottom: 30px;
 }
 
+/* Containeren der holder alle boksene */
+.faq-section__container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Skaber pæn luft mellem kasserne */
+}
+
+/* Element: Det enkelte spørgsmål (Nu som en boks!) */
 .faq-section__item {
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 8px; /* Runde hjørner */
+    padding: 0 20px; /* Luft i siderne indeni boksen */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* En meget svag, professionel skygge */
+    transition: box-shadow 0.3s ease;
+}
+
+/* Gør skyggen lidt tydeligere, når musen holdes over */
+.faq-section__item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Element: Selve spørgsmålet man trykker på */
@@ -327,20 +347,17 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
     color: #333;
     cursor: pointer;
-    padding: 10px 0;
+    padding: 20px 0; /* Skaber luft i toppen og bunden af spørgsmålet */
     transition: color 0.3s ease;
-    
-    /* Fjerner standard-pilen som browsere sætter ind */
-    list-style: none; 
+    list-style: none; /* Fjerner standard pil */
 }
 
-/* Fjerner standard-pilen i Safari/Chrome specifikt */
 .faq-section__question::-webkit-details-marker {
-    display: none;
+    display: none; /* Fjerner standard pil i Safari/Chrome */
 }
 
 .faq-section__question:hover {
@@ -349,9 +366,13 @@ footer {
 
 /* Element: Svar-teksten */
 .faq-section__answer {
-    padding: 10px 0 20px 0;
+    padding-bottom: 20px;
     color: #555;
     line-height: 1.6;
+}
+
+.faq-section__answer p {
+    margin: 0; /* Fjerner standard margin fra <p> for at holde layoutet stramt */
 }
 
 /* Element: Plus-ikonet */
@@ -359,6 +380,12 @@ footer {
     font-size: 1.8rem;
     font-weight: 300;
     transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* MODIFIER: Når HTML5 details er åben */
+details[open] .faq-section__icon {
+    transform: rotate(45deg);
+    color: #990000;
 }
 
 /* =========================================
