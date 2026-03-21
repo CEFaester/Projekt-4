@@ -79,9 +79,28 @@ footer {
   font-weight: 500;
   font-size: 1.1rem;
   transition: color 0.2s;
+  padding: 0.5rem 0;
 }
 .navbar__menu-link:hover {
   color: #FF0000;
+}
+
+.navbar__menu-link:last-child {
+  background: #cc0000;
+  color: #fff;
+  padding: 0.5rem 0.5rem;
+  border: #cc0000 solid 2px;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s, border 0.2s;
+}
+
+.navbar__menu-link:last-child:hover {
+  background: #fff;
+  color: #cc0000;
+  border:#cc0000 solid 2px;
+  padding: 0.5rem 0.5rem;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s, border 0.2s;
 }
 
 
@@ -412,11 +431,13 @@ footer {
   }
   .navbar__menu-link {
     font-size: 1.2rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.5rem;
     border-bottom: 1px solid #eee;
   }
   .navbar__menu-link:last-child {
+    align-self: flex-start;
     border-bottom: none;
+    padding: 0.5rem 0.5rem;
   }
 }
 
