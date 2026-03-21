@@ -435,7 +435,7 @@ footer {
     border-bottom: 1px solid #eee;
   }
   .navbar__menu-link:last-child {
-    align-self: flex-start;
+    align-self: center;
     border-bottom: none;
     padding: 0.5rem 0.5rem;
   }
