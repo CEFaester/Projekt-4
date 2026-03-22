@@ -1,4 +1,4 @@
-
+/* Channe Lykke Krog - Inspiration til burger menuen er hentet fra ChatGPT - Se AI Prompt dokument */
 /* burger menu navigation */
 const menuItems = [
     { menuName: 'Forside', link: 'index.html' },
@@ -12,22 +12,28 @@ const menuItems = [
 const navbarMenu = document.getElementById('navbarMenu');
 const navbarBurger = document.getElementById('navbarBurger');
 
+// Tøm menu
 navbarMenu.innerHTML = '';
 
+// Loop + DOM manipulation (bedre end innerHTML +=)
 for (let i = 0; i < menuItems.length; i++) {
-    navbarMenu.innerHTML += '<a href="' + menuItems[i].link + '" class="navbar__menu-link">' + menuItems[i].menuName + '</a>';
+    const link = document.createElement('a');
+    link.href = menuItems[i].link;
+    link.textContent = menuItems[i].menuName;
+    link.classList.add('navbar__menu-link');
+
+    navbarMenu.appendChild(link);
 }
 
-
-
-/* burger menu transformering af menuen */
-const navbarLinks = navbarMenu.querySelectorAll('.navbar__menu-link');
+/* burger menu toggle */
+const navbarLinks = document.querySelectorAll('.navbar__menu-link');
 
 navbarBurger.addEventListener('click', function () {
     navbarMenu.classList.toggle('active');
     navbarBurger.classList.toggle('active');
 });
 
+// Luk menu når man klikker på et link
 for (let i = 0; i < navbarLinks.length; i++) {
     navbarLinks[i].addEventListener('click', function () {
         navbarMenu.classList.remove('active');
@@ -35,6 +41,7 @@ for (let i = 0; i < navbarLinks.length; i++) {
     });
 }
 
+// Luk menu hvis man klikker udenfor
 document.addEventListener('click', function (event) {
     if (!navbarMenu.contains(event.target) && !navbarBurger.contains(event.target)) {
         navbarMenu.classList.remove('active');
