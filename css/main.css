@@ -422,12 +422,19 @@ footer {
     flex-direction: column;
     gap: 0.7rem;
     padding: 1.2rem 0.7rem;
-    display: none;
+    display: flex;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     z-index: 99;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   }
   .navbar__menu.active {
     display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto; 
   }
   .navbar__menu-link {
     font-size: 1.2rem;

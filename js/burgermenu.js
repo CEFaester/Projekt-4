@@ -15,7 +15,7 @@ const navbarBurger = document.getElementById('navbarBurger');
 // Tøm menu
 navbarMenu.innerHTML = '';
 
-// Loop + DOM manipulation (bedre end innerHTML +=)
+// Loop + DOM manipulation
 for (let i = 0; i < menuItems.length; i++) {
     const link = document.createElement('a');
     link.href = menuItems[i].link;
