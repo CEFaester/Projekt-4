@@ -1,0 +1,188 @@
+/* =========================================
+   EVENTS & MAP (kun til events siden)
+   ========================================= */
+
+.map-section {
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  text-align: center;
+}
+
+.map-section__svg {
+  max-width: 40rem;
+}
+
+.map-section__text {
+  margin: auto;
+  text-align: left;
+}
+
+.map-section__region {
+    fill: #333333; 
+    stroke: white; 
+    stroke-width: 2px;
+    cursor: pointer;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.map-section__region:hover {
+    fill: #990000; 
+    stroke: #990000;
+}
+
+.map-section__region--active {
+    fill: #cc0000; 
+    stroke: white;
+}
+
+.map-section__reset-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007f24;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Nunito", sans-serif;
+    font-weight: 300;
+    transition: background-color 0.3s ease;
+}
+
+.map-section__reset-btn:hover {
+  background-color: #198754;
+}
+
+.map-section__filter-title {
+    text-align: left;
+    font-weight: 800;
+    color: #cc0000;
+    font-size: 24px;
+    border-bottom: 2px solid #ccc; 
+    padding-bottom: 10px;
+    margin-top: 40px; 
+    margin-bottom: 20px;
+}
+
+.map-section__cards {
+    padding-top: 10px;
+    align-items: stretch;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    padding-bottom: 20px; 
+    scrollbar-width: none; 
+}
+
+.map-section__cards::-webkit-scrollbar {
+    display: none; 
+}
+
+.map-section__empty-message {
+    grid-column: 1 / -1; 
+    font-style: italic;
+    color: #666;
+    font-size: 18px;
+}
+
+.event-card {
+    background-color: #f4faf7;
+    padding: 0 0 15px 0; 
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative; 
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+    min-height: 350px; 
+    flex: 0 0 75%;
+    scroll-snap-align: center;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.event-card__image {
+    width: 100%;
+    height: 180px; 
+    min-height: 180px; 
+    flex-shrink: 0; 
+    background-color: #e0e0e0;
+    object-fit: cover; 
+    display: block;
+    margin-bottom: 15px; 
+}
+
+.event-card__label {
+    background-color: #990000;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.event-card__label--on-image {
+    position: absolute; 
+    top: 10px; 
+    left: 10px; 
+    z-index: 10; 
+}
+
+.event-card__title {
+    margin-top: 0;
+    color: #cc0000;
+    font-size: 20px;
+    padding: 0 15px; 
+    margin-bottom: 5px;
+}
+
+.event-card__description {
+    color: #444;
+    line-height: 1.5;
+    font-size: 14px;
+    padding: 0 15px; 
+    margin-bottom: 15px; 
+}
+
+.event-card__footer {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 15px; 
+    border-top: 1px solid #eee; 
+    padding-top: 10px;
+    margin-top: auto;
+}
+
+.event-card__date {
+    margin: 0;
+    color: #666;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.event-card__icon {
+    width: 50px; 
+    height: 50px;
+    object-fit: contain; 
+}
+
+@media (min-width: 900px) {
+    .map-section__cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        overflow-x: visible;
+        scroll-snap-type: none;
+    }
+    .event-card {
+        flex: auto;
+        width: 294px;
+        margin: 0 auto;
+    }
+}
