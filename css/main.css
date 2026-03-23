@@ -256,6 +256,11 @@ footer {
   text-align: center;
 }
 
+.map-section__title {
+  color: #cc0000;
+  text-align: left;
+}
+
 .map-section__svg {
   max-width: 40rem;
 }
@@ -429,6 +434,10 @@ footer {
 .faq-section, .faq-top {
     margin: 2.5rem 0 2.5rem 0;
     padding: 0 20px;
+}
+
+.faq-top__title {
+  color: #cc0000;
 }
 
 .faq-section__title {
