@@ -1,3 +1,31 @@
+/* Skjul native scrollbar på karousellen */
+.omos-roller__karousel {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.omos-roller__karousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+/* --- OM OS KAROUSEL DOTS --- */
+.omos-roller__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0 0.5rem 0;
+}
+.omos-roller__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.omos-roller__dot.active {
+  background: #e94f4f;
+}
 /* sikrer at footer altid er i bunden */
 html, body {
   height: 100%;
@@ -928,23 +956,26 @@ footer {
     width: 100%;
 }
 .omos-roller__kort {
-    min-width: 90vw;
-    max-width: 400px;
-    flex: 0 0 90vw;
-    scroll-snap-align: center;
-    box-sizing: border-box;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    text-align: center;
-    background: #F8FCFA;
-    border: 1px solid #cc0000;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
-    gap: 1.2rem;
+  flex: 0 0 90vw;
+  max-width: 400px;
+  scroll-snap-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #F8FCFA;
+  border: 1px solid #cc0000;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+  gap: 1.2rem;
+  text-align: center;
+}
+
+@media (min-width: 900px) {
+  .omos-roller__kort {
+    flex: 0 0 300px;
+    max-width: 300px;
+  }
 }
 .omos-roller__kort-overskrift {
     font-family: "Nunito", sans-serif;
