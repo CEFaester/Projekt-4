@@ -1,4 +1,6 @@
-// BILLEDECARARUSEL.JS
+// Lærke: Billedecarousel JS - håndterer karousellen på index.html
+// Lavet i samarbejde med AI (Gemini) - rettet og tilpasset af Lærke
+// SE AI PROMPT DOKUMENT FOR MERE INFO OM KODEN
 
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Hero slider JS kører ✅");

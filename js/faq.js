@@ -1,3 +1,7 @@
+// Carl Emil: FAQ JS - håndterer FAQ-sektionen på faq.html
+// Lavet i samarbejde med AI - rettet og tilpasset af Carl Emil
+// SE AI PROMPT DOKUMENT FOR MERE INFO OM KODEN
+
 // 1. DINE SPØRGSMÅL (Super nemt at tilføje flere her!)
 const faqData = [
     { 

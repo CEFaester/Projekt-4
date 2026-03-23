@@ -1,3 +1,7 @@
+// Carl Emil: Kort JS - håndterer kortene og filtreringen på kort-sektionen på events.html
+// Lavet i samarbejde med AI - rettet og tilpasset af Carl Emil
+// SE AI PROMPT DOKUMENT FOR MERE INFO OM KODEN
+
 // 1. VORES ORDBOG (Mapping Object): Oversætter sikre ID'er til pæne navne
 const regionNames = {
     "hovedstaden": "Hovedstaden",
