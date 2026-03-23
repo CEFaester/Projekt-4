@@ -1,3 +1,44 @@
+/* --- QUIZ SEKTION --- */
+.quiz {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem 0 2.5rem 0;
+}
+.quiz__container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+.quiz__overskrift {
+  color: #FF0000;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.quiz__cta {
+  color: #FF0000;
+  border: 2px solid #FF0000;
+  background: none;
+  border-radius: 10px;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.quiz__cta:hover {
+  background: #FF0000;
+  color: #fff;
+}
 /* Skjul native scrollbar på karousellen */
 .omos-roller__karousel {
   scrollbar-width: none; /* Firefox */
