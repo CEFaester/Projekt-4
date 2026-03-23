@@ -425,16 +425,16 @@ footer {
 /* =========================================
    FAQ SEKTION (Tilbageført)
    ========================================= */
-.faq-section {
-    max-width: 800px;
-    margin: 40px auto;
+
+.faq-section, .faq-top {
+    margin: 2.5rem 0 2.5rem 0;
     padding: 0 20px;
 }
 
 .faq-section__title {
     text-align: center;
     color: #cc0000;
-    margin-bottom: 30px;
+    margin: 2.5rem 0 2.5rem 0;
     font-weight: 700;
 }
 
