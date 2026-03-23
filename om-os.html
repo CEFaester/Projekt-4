@@ -1,69 +1,167 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex">
-
-    <title>Om os</title>
-
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" type="image/svg+xml" href="assets/sindfrivilliglogo.svg">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-
-    <script src="js/scrolltotop.js" defer></script>
-    <script src="js/burgermenu.js" defer></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="noindex">
+        <title>Om os</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="icon" type="image/svg+xml" href="assets/sindfrivilliglogo.svg">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+        <script src="js/scrolltotop.js" defer></script>
+        <script src="js/burgermenu.js" defer></script>
+        <!-- CSS flyttet til main.css for bedre struktur og genbrug -->
 </head>
 <body>
         <nav class="navbar">
-            <a href="index.html">
-                <img src="assets/sindfrivilliglogo.svg" alt="SIND logo" class="navbar__logo">
-            </a>
-            <button class="navbar__burger" id="navbarBurger" aria-label="Åbn menu">
-                <span class="navbar__burger-line"></span>
-                <span class="navbar__burger-line"></span>
-                <span class="navbar__burger-line"></span>
-            </button>
-            <div class="navbar__menu" id="navbarMenu">
-                <a href="index.html" class="navbar__menu-link">Forside</a>
-                <a href="events.html" class="navbar__menu-link">Events</a>
-                <a href="om-os.html" class="navbar__menu-link">Om os</a>
-                <a href="faq.html" class="navbar__menu-link">FAQ</a>
-                <a href="kontakt.html" class="navbar__menu-link">Kontakt</a>
-            </div>
-
-        </nav>
-        <!-- Om os indhold kommer her -->
-        <footer class="footer">
-            <div class="footer__top">Er du klar til at blive en del af fællesskabet?</div>
-            <div class="footer__sub">SIND har allerede 500+ frivillige, men vi vil gerne have dig med på holdet!</div>
-            <div class="footer__action">
-                <div class="footer__action-text">Klik her og send din ansøgning i dag!</div>
-                <button class="footer__action-btn">Bliv frivillig</button>
-            </div>
-            <div class="footer__help">
-                <h5 class="footer__help-title">Brug for hjælp?</h5>
-                <div class="footer__contact">
-                    <strong>Kontakt os her!</strong><br>
-                    SIND - Landsforeningen for psykisk sundhed<br>
-                    Blekinge Boulevard 2<br>
-                    2630 Taastrup<br><br>
-                    Tlf: 35 24 07 50<br>
-                    Mail: <a href="mailto:landsforeningen@sind.dk" class="footer__contact-mail">landsforeningen@sind.dk</a>
-                </div>
-                <button id="scrollToTopBtn" class="footer__scroll-top-btn" aria-label="Scroll til toppen">
-                    <img src="assets/arrow-up.svg" alt="Op">
+                <a href="index.html">
+                        <img src="assets/sindfrivilliglogo.svg" alt="SIND logo" class="navbar__logo">
+                </a>
+                <button class="navbar__burger" id="navbarBurger" aria-label="Åbn menu">
+                        <span class="navbar__burger-line"></span>
+                        <span class="navbar__burger-line"></span>
+                        <span class="navbar__burger-line"></span>
                 </button>
-                <div class="footer__icons">
-                    <a href="#" class="footer__icon-link"><img src="assets/facebook.svg" alt="Facebook" class="footer__icon-img"></a>
-                    <a href="#" class="footer__icon-link"><img src="assets/linkedin.svg" alt="LinkedIn" class="footer__icon-img"></a>
-                    <a href="#" class="footer__icon-link"><img src="assets/instagram.svg" alt="Instagram" class="footer__icon-img"></a>
+                <div class="navbar__menu" id="navbarMenu">
+                        <a href="index.html" class="navbar__menu-link">Forside</a>
+                        <a href="events.html" class="navbar__menu-link">Events</a>
+                        <a href="om-os.html" class="navbar__menu-link">Om os</a>
+                        <a href="faq.html" class="navbar__menu-link">FAQ</a>
+                        <a href="kontakt.html" class="navbar__menu-link">Kontakt</a>
                 </div>
-            </div>
+        </nav>
+        <main class="omos">
+             <!-- Hero sektion -->  
+            <section class="omos-hero">
+                <div class="omos-hero__container">
+                    <img src="assets/sindfrivilligbannerfoto.webp" alt="Billede af en ung frivillig" class="omos-hero__billede">
+                    <div class="omos-hero__overlay">
+                        <h1 class="omos-hero__overskrift omos-hero__overskrift--rød">Om SIND frivillige</h1>
+                        <p class="omos-hero__undertitel">Hos SIND handler frivillighed om fællesskab, nærvær og modet til at være der for hinanden.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="omos-indhold"></section>
+                <h2 class="omos-indhold__overskrift">Om SIND</h2>
+                <p class="omos-indhold__tekst">
+                    SIND Frivillig er for unge, der vil være en del af et fællesskab, hvor man gør en forskel sammen.<br>
+                    Vi arbejder for mere åbenhed, nærvær og tryghed omkring mental trivsel - både for dem, vi møder, og for de frivillige, der er med.<br>
+                    Hos os handler frivillighed ikke om at kunne alt på forhånd, men om at være til stede og bidrage med det, man kan.
+                </p>
+            </section>
+            <!-- En dag hos SIND frivillig -->
+                      <section class="omos-video">
+                <div class="omos-video__container">
+                    <h2 class="omos-video__overskrift">Kom med en dag som SIND frivillig</h2>
+                    <p class="omos-video__tekst">Følg med bag kulissen og mærk stemningen, relationerne og de små øjeblikke, der betyder noget. Videoen viser dig præcis, hvad du bliver en del af.</p>
+                    <div class="omos-video__media">
+                        <!-- Video placeholder -->
+                        <div class="omos-video__placeholder">
+                            <span class="omos-video__placeholder-text">Her kommer en video om frivillighed</span>
+                        </div>
+                    </div>
+                    <button class="omos-video__cta">Bliv frivillig</button>
+                </div>
+            </section>
+            <!-- Roller -->
+             <section class="omos-roller">
+                <div class="omos-roller__container">
+                    <h2 class="omos-roller__overskrift">Hvilken rolle passer til dig?</h2>
+                    <p class="omos-roller__intro">Uanset om du er til samtaler, aktiviteter eller praktiske opgaver — her kan du se, hvad du kan bidrage med.</p>
+                    <div class="omos-roller__karousel-wrap">
+                        <div class="omos-roller__kortliste omos-roller__karousel">
+                        <div class="omos-roller__kort">
+                            <div class="omos-roller__ikon-wrap">
+                                <!-- Ikon placeholder -->
+                                <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" fill="#F4FAF7"/><path d="M24 24c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6Zm0 2c-4.418 0-8 2.239-8 5v1a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1c0-2.761-3.582-5-8-5Z" stroke="#B3B3B3" stroke-width="2"/></svg>
+                            </div>
+                            <div class="omos-roller__kort-indhold">
+                                <h3 class="omos-roller__kort-overskrift">Bestyrelsesarbejde</h3>
+                                <div class="omos-roller__kort-afdeling">Alle afdelinger</div>
+                                <p class="omos-roller__kort-tekst">Vær med til at forme SINDs arbejde og tage del i vigtige beslutninger.</p>
+                            </div>
+                        </div>
+                        <div class="omos-roller__kort">
+                            <div class="omos-roller__ikon-wrap">
+                                <!-- Ikon placeholder -->
+                                <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" fill="#F4FAF7"/><path d="M24 24c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6Zm0 2c-4.418 0-8 2.239-8 5v1a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1c0-2.761-3.582-5-8-5Z" stroke="#B3B3B3" stroke-width="2"/></svg>
+                            </div>
+                            <div class="omos-roller__kort-indhold">
+                                <h3 class="omos-roller__kort-overskrift">Arrangementer og events</h3>
+                                <div class="omos-roller__kort-afdeling">Alle afdelinger</div>
+                                <p class="omos-roller__kort-tekst">Planlæg og deltag i sociale arrangementer, oplæg og fællesskabsaktiviteter.</p>
+                            </div>
+                        </div>
+                        <div class="omos-roller__kort">
+                            <div class="omos-roller__ikon-wrap">
+                                <!-- Ikon placeholder -->
+                                <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" fill="#F4FAF7"/><path d="M24 24c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6Zm0 2c-4.418 0-8 2.239-8 5v1a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1c0-2.761-3.582-5-8-5Z" stroke="#B3B3B3" stroke-width="2"/></svg>
+                            </div>
+                            <div class="omos-roller__kort-indhold">
+                                <h3 class="omos-roller__kort-overskrift">Bisidder i møder med kommunen</h3>
+                                <div class="omos-roller__kort-afdeling">Alle afdelinger</div>
+                                <p class="omos-roller__kort-tekst">Støt andre ved at deltage som bisidder i vigtige møder og samtaler.</p>
+                            </div>
+                        </div>
+                        <div class="omos-roller__kort">
+                            <div class="omos-roller__ikon-wrap">
+                                <!-- Ikon placeholder -->
+                                <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" fill="#F4FAF7"/><path d="M24 24c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6Zm0 2c-4.418 0-8 2.239-8 5v1a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1c0-2.761-3.582-5-8-5Z" stroke="#B3B3B3" stroke-width="2"/></svg>
+                            </div>
+                            <div class="omos-roller__kort-indhold">
+                                <h3 class="omos-roller__kort-overskrift">Besøgsven</h3>
+                                <div class="omos-roller__kort-afdeling">Alle afdelinger</div>
+                                <p class="omos-roller__kort-tekst">Skab nærvær og tryghed gennem faste, uformelle besøg hos mennesker, der har brug for selskab.</p>
+                            </div>
+                        </div>
+                        <div class="omos-roller__kort">
+                            <div class="omos-roller__ikon-wrap">
+                                <!-- Ikon placeholder -->
+                                <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" fill="#F4FAF7"/><path d="M24 24c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6Zm0 2c-4.418 0-8 2.239-8 5v1a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1c0-2.761-3.582-5-8-5Z" stroke="#B3B3B3" stroke-width="2"/></svg>
+                            </div>
+                            <div class="omos-roller__kort-indhold">
+                                <h3 class="omos-roller__kort-overskrift">Telefonrådgivning</h3>
+                                <div class="omos-roller__kort-afdeling">Alle afdelinger</div>
+                                <p class="omos-roller__kort-tekst">Giv støtte og vejledning til mennesker, der har brug for nogen at tale med.</p>
+                            </div>
+                        </div>
+                        <div class="omos-roller__kort">
+                            <div class="omos-roller__ikon-wrap">
+                                <!-- Ikon placeholder -->
+                                <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="48" height="48" rx="8" fill="#F4FAF7"/><path d="M24 24c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6Zm0 2c-4.418 0-8 2.239-8 5v1a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1c0-2.761-3.582-5-8-5Z" stroke="#B3B3B3" stroke-width="2"/></svg>
+                            </div>
+                            <div class="omos-roller__kort-indhold">
+                                <h3 class="omos-roller__kort-overskrift">Flere roller kræver oplæring eller kurser</h3>
+                                <div class="omos-roller__kort-afdeling">SINDs landsorganisation</div>
+                                <p class="omos-roller__kort-tekst">Nogle roller kræver oplæring eller kurser, som organiseres af SINDs landsorganisation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+                <div class="footer__top">Er du klar til at blive en del af fællesskabet?</div>
+                <div class="footer__sub">SIND har allerede 500+ frivillige, men vi vil gerne have dig med på holdet!</div>
+                <div class="footer__action">
+                        <div class="footer__action-text">Klik her og send din ansøgning i dag!</div>
+                        <button class="footer__action-btn">Bliv frivillig</button>
+                </div>
+                <div class="footer__help">
+                        <h5 class="footer__help-title">Brug for hjælp?</h5>
+                        <div class="footer__contact">
+                                <strong>Kontakt os her!</strong><br>
+                                SIND - Landsforeningen for psykisk sundhed<br>
+                                Blekinge Boulevard 2<br>
+                                2630 Taastrup<br>
+                                Danmark
+                        </div>
+                </div>
         </footer>
-</body>
+    </body>
 </html>
-

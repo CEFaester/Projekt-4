@@ -616,3 +616,450 @@ details[open] .faq-section__icon {
     border-radius: 12px;
   }
 }
+
+/* =========================================
+   OM OS SIDE 
+   ========================================= */
+
+.omos {
+    padding: 1.5rem 1rem;
+    font-family: "Nunito", sans-serif;
+    max-width: 100vw;
+}
+.omos__top {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.omos__logo {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+.omos__overskrift {
+    color: #cc0000;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.omos__undertitel {
+    color: #444;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+.omos__billede {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    margin: 0 auto 1.5rem auto;
+    display: block;
+    object-fit: cover;
+    min-height: 120px;
+}
+.omos__afsnit-overskrift {
+    color: #cc0000;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+.omos__tekst {
+    color: #222;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+.omos__værdier {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.omos__værdiliste {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+.omos__værdi {
+    background: #f4faf7;
+    color: #007f24;
+    border-radius: 6px;
+    padding: 0.5rem 1.2rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+    .omos {
+        padding: 2.5rem 2rem;
+    }
+    .omos__top {
+        margin-bottom: 2.5rem;
+    }
+    .omos__overskrift {
+        font-size: 2.3rem;
+    }
+    .omos__afsnit-overskrift {
+        font-size: 1.5rem;
+    }
+    .omos__billede {
+        min-height: 180px;
+    }
+    .omos__værdiliste {
+        gap: 1rem;
+    }
+}
+/* Desktop */
+@media (min-width: 900px) {
+    .omos {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 3rem 0;
+    }
+    .omos__top {
+        margin-bottom: 3rem;
+    }
+    .omos__overskrift {
+        font-size: 2.7rem;
+    }
+    .omos__afsnit-overskrift {
+        font-size: 1.7rem;
+    }
+    .omos__værdiliste {
+        gap: 1.2rem;
+    }
+    .omos__billede {
+        min-height: 220px;
+    }
+}
+
+
+.omos-roller {
+    background: #fff;
+    padding: 2.5rem 1rem 2.5rem 1rem;
+}
+.omos-roller__container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.omos-roller__overskrift {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #cc0000;
+    margin: 0 0 0.5rem 0;
+    text-align: left;
+}
+.omos-roller__intro {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #222;
+    margin: 0 0 1.2rem 0;
+    text-align: left;
+    max-width: 500px;
+}
+.omos-roller__karousel-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.omos-roller__karousel {
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+.omos-roller__kortliste {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+}
+.omos-roller__kort {
+    min-width: 90vw;
+    max-width: 400px;
+    flex: 0 0 90vw;
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    text-align: center;
+    background: #F8FCFA;
+    border: 1px solid #cc0000;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+    padding: 2rem 1.2rem 2rem 1.2rem;
+    gap: 1.2rem;
+}
+.omos-roller__kort-overskrift {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #cc0000;
+    margin: 0 0 0.2rem 0;
+    text-align: center;
+}
+.omos-roller__kort-afdeling {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 0.7rem;
+    text-align: center;
+}
+.omos-roller__kort-tekst {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #222;
+    margin: 0;
+    text-align: center;
+}
+.omos-roller__ikon-wrap {
+    margin-bottom: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+@media (min-width: 900px) {
+    .omos-roller__karousel {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 14px;
+        overflow-x: visible;
+        scroll-snap-type: none;
+        padding-bottom: 0;
+        justify-content: center;
+    }
+    .omos-roller__kortliste {
+        display: contents;
+    }
+    .omos-roller__kort {
+        min-width: 0;
+        max-width: 100%;
+        flex: 1 1 0;
+        margin: 0;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        box-sizing: border-box;
+        min-height: 420px;
+    }
+}
+
+.omos-video {
+    background: #F4FAF7;
+    padding: 2rem 1rem 2rem 1rem;
+    margin-bottom: 2rem;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.10);
+}
+.omos-video__container {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+.omos-video__overskrift {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #cc0000;
+    margin: 0 0 0.5rem 0;
+    text-align: left;
+    width: 100%;
+}
+.omos-video__tekst {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #222;
+    margin: 0 0 0.7rem 0;
+    text-align: left;
+    width: 100%;
+}
+.omos-video__media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.omos-video__placeholder {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #e0e0e0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.omos-video__placeholder-text {
+    color: #888;
+    font-family: "Nunito", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.omos-video__cta {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    background: #198754;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5rem;
+    width: 100%;
+    max-width: 320px;
+}
+.omos-video__cta:hover {
+    background: #145c32;
+}
+
+.omos-hero {
+    width: 100%;
+    background: none;
+    padding: 0;
+}
+.omos-hero__container {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+.omos-hero__billede {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+.omos-hero__overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.2rem 1rem 1.2rem 1rem;
+    background: rgba(179, 179, 179, 0.6);
+    color: #fff;
+    text-align: left;
+}
+.omos-hero__overskrift {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 2.25rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.1;
+    color: #fff;
+    text-align: left;
+}
+.omos-hero__overskrift--rød {
+    color: #cc0000;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.omos-hero__undertitel {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+    text-align: left;
+    opacity: 0.95;
+}
+.omos-indhold {
+    padding: 2rem 1rem 1.5rem 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.omos-indhold__overskrift {
+    color: #cc0000;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+    margin-top: 0.5rem;
+    line-height: 1.2;
+    text-align: left;
+}
+.omos-indhold__tekst {
+    color: #222;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+@media (min-width: 600px) {
+    .omos-hero__billede {
+        height: 300px;
+    }
+    .omos-hero__overlay {
+        padding: 2rem 2.5rem 2rem 2.5rem;
+    }
+    .omos-hero__overskrift {
+        font-size: 2.25rem;
+    }
+    .omos-hero__undertitel {
+        font-size: 1rem;
+    }
+    .omos-indhold {
+        padding: 3rem 2.5rem 2.5rem 2.5rem;
+        max-width: 700px;
+    }
+    .omos-indhold__overskrift {
+        font-size: 1.375rem;
+    }
+    .omos-indhold__tekst {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 900px) {
+    .omos {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .omos-hero__billede {
+        height: 380px;
+    }
+    .omos-hero__overlay {
+        padding: 2.5rem 4rem 2.5rem 4rem;
+    }
+    .omos-hero__overskrift {
+        font-size: 2.25rem;
+    }
+    .omos-hero__undertitel {
+        font-size: 1rem;
+    }
+    .omos-indhold {
+        padding: 4rem 0 3rem 0;
+        max-width: 800px;
+    }
+    .omos-indhold__overskrift {
+        font-size: 1.375rem;
+    }
+    .omos-indhold__tekst {
+        font-size: 1rem;
+    }
+}
