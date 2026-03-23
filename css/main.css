@@ -1006,15 +1006,6 @@ footer {
         font-size: 1rem;
     }
 }
-  .footer__icons {
-    gap: 1rem;
-  }
-  .footer__icon-link {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-  }
-}
 
 /* --- MOBIL --- */
 @media (max-width: 480px) {
