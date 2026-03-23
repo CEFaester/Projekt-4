@@ -119,10 +119,6 @@ footer {
   text-align: left;
 }
 
-/* =========================================
-   EVENTS & MAP (kun til events siden)
-   ========================================= */
-
 .map-section__region {
     fill: #333333; 
     stroke: white; 
