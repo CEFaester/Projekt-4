@@ -73,23 +73,23 @@ const quizSpørgsmål = [
 const quizRoller = {
   A: {
     titel: "🌱 Besøgsven",
-    beskrivelse: "Du er typen, man kan slappe af med. Du er god til at være der — og det gør en større forskel, end du tror. Du kan lide rolige samtaler, du er god til at skabe tryghed, og du nyder at gøre en forskel på et personligt niveau. Som besøgsven er du der for ét menneske ad gangen. Det kan være en gåtur, en kop kaffe eller bare en snak om stort og småt. Det vigtigste er nærvær og tid. Du behøver ikke være ekspert — det handler om at lytte og være til stede. De, der møder dig, oplever tryghed og varme, og du får ofte selv gode relationer og små øjeblikke, der betyder meget."
+    beskrivelse: "Du er en, man kan slappe af med. Du er god til at lytte og skabe tryghed. Som besøgsven er du der for ét menneske ad gangen – fx til en gåtur, en kop kaffe eller en rolig snak. <br><br>Det vigtigste er dit nærvær og din tid."
   },
   B: {
     titel: "🤝 Bisidder",
-    beskrivelse: "Du er en, der bakker andre op, når det gælder. Du hjælper mennesker med at stå stærkere i svære situationer. Du er empatisk, rolig i pressede situationer og kan hjælpe andre med at navigere i svære ting. Som bisidder er du med, når nogen har brug for støtte i svære situationer. Det kan være ved møder, samtaler med myndigheder eller andre situationer, hvor det hjælper at have én med, der støtter og taler deres sag. Din rolle er vigtig, fordi du hjælper andre med at føle sig hørt og forstået."
+    beskrivelse: "Du er en tryg støtte, når det gælder. Du er rolig og empatisk, også i svære situationer. Som bisidder deltager du i møder og hjælper andre med at føle sig hørt, forstået og bedre rustet. <br><br>Det kan være i møder med myndigheder, på hospitalet eller andre steder, hvor det kan være svært at være alene. "
   },
   C: {
     titel: "🎉 Arrangement & events",
-    beskrivelse: "Du skaber liv og fællesskab. Du er med til at få ting til at ske — og samle mennesker. Du har energi og idéer, kan lide at arrangere og samle folk, og du får glæde af at se andre have det sjovt og være sammen. Her får du lov til at sætte gang i tingene! Du kan være med til at planlægge sociale aktiviteter, events eller fællesskaber, der samler folk. Din rolle er at skabe gode oplevelser, hvor folk føler sig velkomne, og hvor fællesskabet blomstrer."
+    beskrivelse: "Du kan lide at samle mennesker og skabe liv. Du får idéer og energi af fællesskaber. <br><br>Her er du med til at planlægge aktiviteter og events, hvor folk mødes og får gode oplevelser sammen."
   },
   D: {
     titel: "🧭 Bestyrelsesarbejde",
-    beskrivelse: "Du tænker lidt længere frem. Du vil gerne have indflydelse og være med til at forme noget. Du kan lide ansvar, tænker strategisk og har lyst til at være med til at forme fremtiden for SIND. Som frivillig i bestyrelsen er du med til at tage beslutninger og udvikle organisationen. Du arbejder med strategiske opgaver, planer og rammer, der gør det muligt for SIND at vokse og nå ud til flere. Din indsats påvirker hele fællesskabet, og du får erfaring med ledelse, planlægning og samarbejde på et overordnet niveau."
+    beskrivelse: "Du tænker fremad og vil gerne have indflydelse. Du trives med ansvar og overblik. I bestyrelsen er du med til at udvikle organisationen og skabe rammerne for fællesskabet. <br><br>Du får erfaring med at arbejde strategisk og tage beslutninger, der har betydning for mange mennesker."
   },
   E: {
     titel: "☎️ Telefonrådgivning",
-    beskrivelse: "Du er god til at lytte — helt ægte. Du er der for mennesker, når de har brug for nogen at tale med. Du er tålmodig, god til at lytte og kan skabe tryghed selv i korte samtaler. Du synes det er givende at hjælpe andre, også uden fysisk kontakt. Som telefonrådgiver hjælper du mennesker, der ringer ind og har brug for nogen at tale med. Det kan være alt fra små ting til svære situationer. Din vigtigste rolle er at lytte, stille spørgsmål og give nærvær. Du hjælper anonymt, men din indsats kan betyde rigtig meget for den, der ringer."
+    beskrivelse: "Du er tålmodig og god til at lytte. Du kan skabe tryghed – også på afstand. <br><br>Som telefonrådgiver taler du med mennesker, der har brug for støtte, og giver nærvær gennem samtaler."
   }
 };
 
@@ -134,7 +134,7 @@ function visQuiz() {
 }
 
 function visScoreModal(rolle) {
-  scoreModal.style.display = 'block';
+  scoreModal.style.display = 'flex';
   const rolleObj = quizRoller[rolle];
   const quizBemærkning = document.getElementById('quizBemærkning');
   console.log('Quiz resultat rolle:', rolle);
@@ -156,7 +156,7 @@ function skjulScoreModal() {
 }
 
 function visValgModal() {
-  valgModal.style.display = 'block';
+  valgModal.style.display = 'flex';
 }
 function skjulValgModal() {
   valgModal.style.display = 'none';
