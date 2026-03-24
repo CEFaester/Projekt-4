@@ -176,7 +176,7 @@ footer {
 
 .hero-slider .hero-content {
   margin: auto;
-  /* NYT: calc() sørger for, at kassen ved præcis hvor bred skærmen er, 
+  /* calc() sørger for, at kassen ved præcis hvor bred skærmen er, 
      når vi trækker dine 16px margin fra i hver side. */
   width: calc(100% - 32px); 
   display: flex;
@@ -189,10 +189,7 @@ footer {
 .hero-slider .hero-buttons {
   display: flex;
   flex-direction: column;
-  /* ÆNDRET: Din faste bredde er bevaret, så de ikke skifter størrelse, 
-     men nu passer den rent faktisk på en mobilskærm! */
   width: 294px; 
-  /* NYT: Tvinger selve knap-kassen perfekt ind i midten */
   align-self: center; 
   gap: 10px;
 }
