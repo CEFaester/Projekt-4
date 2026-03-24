@@ -217,13 +217,15 @@ footer {
   gap: 10px;
 }
 
-.hero-slider .hero-content h1 {
-  font-size: 1.5rem;
+.hero-slider .hero-content h2 {
+  font-size: 2.5rem;
   margin-bottom: 6px;
+  color: #CC0000;
+  font-weight: 700;
 }
 
 .hero-slider .hero-content p {
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   margin-bottom: 12px;
 }
 

@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
       div.innerHTML = `
         <div class="hero-overlay">
           <div class="hero-content">
-            <h1>${slide.title}</h1>
+            <h2>${slide.title}</h2>
             <p>${slide.text}</p>
             <div class="hero-buttons">${buttonsHTML}</div>
           </div>
