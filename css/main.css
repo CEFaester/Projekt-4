@@ -322,40 +322,36 @@ footer {
    ========================================= */
 .forside-banner {
     background-color: #F4FAF7;
-    padding: 2.5rem 1rem; /* Lidt luft i top og bund */
+    padding: 2.5rem 1rem;
     width: 100%;
-    box-sizing: border-box; /* Sikrer at padding ikke gør sektionen for bred */
-    overflow: hidden; /* Sikkerhedsnet der forhindrer horisontal scrolling */
+    box-sizing: border-box;
+    overflow: hidden;
 }
 .forside-banner__container {
     max-width: 900px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Spreder de tre kasser pænt ud */
+    justify-content: space-between;
     align-items: flex-start; 
-    flex-wrap: nowrap; /* Tvinger dem til altid at blive på én linje */
-    gap: 10px; /* Lidt luft imellem kasserne */
+    flex-wrap: nowrap;
+    gap: 10px;
 }
 
-/* Element: Den kasse der holder ikon + tekst samlet */
 .forside-banner__item {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 33%; /* Sørger for at de tre kasser deler pladsen præcis lige over */
-    gap: 12px; /* Luft mellem ikonet og titlen */
+    width: 33%;
+    gap: 12px;
 }
 
 .forside-banner__ikon {
     width: 100%;
     max-width: 60px;
-    
-    /* ÆNDRET: Vi tvinger billedet til altid at være 60px højt, 
-       uanset dets naturlige størrelse! */
     height: 60px; 
     
-    /* VIGTIGT: contain sikrer, at billedet bevarer sine proportioner 
+    /* contain sikrer, at billedet bevarer sine proportioner 
        uden at blive strukket skævt. */
     object-fit: contain; 
 }
@@ -366,7 +362,6 @@ footer {
     font-size: 0.95rem; 
     font-weight: 700;
     margin: 0;
-    /* Sikrer at meget lange ord bindestregs-deles i stedet for at skubbe layoutet */
     word-break: break-word; 
 }
 
