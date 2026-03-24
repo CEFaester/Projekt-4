@@ -236,11 +236,9 @@ footer {
   padding: 10px 20px;
   border-radius: 6px;
   text-decoration: none;
+  font-weight: bold;
   
-  width: 80%; 
-  max-width: 300px; 
-  
-  text-align: center;
+  width: 300px; 
   white-space: nowrap;
 }
 
@@ -255,6 +253,10 @@ footer {
   background: #FFFCFA;
   color: #E63946;
   border: 2px solid #E63946;
+}
+
+.hero-slider .hero-buttons {
+  align-self: center;
 }
 
 .hero-slider .slider-dots {
@@ -274,6 +276,7 @@ footer {
   border: none;
   background: rgba(255,255,255,0.6);
 }
+
 
 .hero-slider .slider-dots button.active {
   background: #CC0000;
@@ -1428,6 +1431,10 @@ details[open] .faq-section__icon {
   .hero-slider .btn-secondary {
     width: 300px;
   }
+
+  .hero-slider .hero-buttons {
+  align-self: left;
+}
 
   .hero-slider .arrow {
     display: block;
