@@ -877,7 +877,7 @@ details[open] .faq-section__icon {
   border-radius: 12px;
   background: #fff;
   color: #FF0000;
-  font-family: inherit;
+  font-family: "Nunito", sans-serif;
   font-weight: 700;
   border: 2px solid #FF0000;
   cursor: pointer;
@@ -961,7 +961,7 @@ details[open] .faq-section__icon {
 #quizBemærkning {
   color: #fff;
   font-size: 1rem;
-  font-family: inherit;
+  font-family: "Nunito", sans-serif;
   font-weight: 300;
   margin: 2.2rem 0 1.2rem 0;
   text-align: left;
@@ -1263,7 +1263,7 @@ details[open] .faq-section__icon {
     margin-top: 0.5rem;
     width: 100%;
     max-width: 320px;
-    font-family: inherit;
+    font-family: "Nunito", sans-serif;
 }
 .omos-video__cta:hover {
     background: #145c32;
@@ -1370,6 +1370,7 @@ details[open] .faq-section__icon {
 .kontakt-side__layout {
   display: grid;
   gap: 1.5rem;
+  justify-items: center;
 }
 
 .kontakt-formular,
@@ -1379,6 +1380,14 @@ details[open] .faq-section__icon {
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+.kontakt-formular,
+.kontakt-side__kort {
+  width: 100%;
+  max-width: 50rem;
+  justify-self: center;
 }
 
 .kontakt-formular__titel,
@@ -1427,8 +1436,18 @@ details[open] .faq-section__icon {
   color: #222;
   background: #FFFCFA;
   border: 1px solid #cfcfcf;
-  border-radius: 12px;
+  border-radius: 6px;
   box-sizing: border-box;
+}
+
+.kontakt-formular__felt select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 2.75rem;
+  background-image: linear-gradient(45deg, transparent 50%, #198754 50%), linear-gradient(135deg, #198754 50%, transparent 50%);
+  background-position: calc(100% - 1.1rem) calc(50% - 0.1rem), calc(100% - 0.8rem) calc(50% - 0.1rem);
+  background-size: 0.35rem 0.35rem, 0.35rem 0.35rem;
+  background-repeat: no-repeat;
 }
 
 .kontakt-formular__felt textarea {
@@ -1450,25 +1469,29 @@ details[open] .faq-section__icon {
 }
 
 .kontakt-formular__samtykke input {
+  width: 1rem;
+  height: 1rem;
   margin-top: 0.2rem;
+  border-radius: 4px;
+  accent-color: #198754;
 }
 
 .kontakt-formular__knap {
   justify-self: start;
-  padding: 0.8rem 1.5rem;
-  font: inherit;
+  padding: 0.7rem 1.5rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
   font-weight: 700;
   color: #FFFCFA;
-  background: #007F24;
-  border: 2px solid #007F24;
-  border-radius: 999px;
+  background: #198754;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.2s;
 }
 
 .kontakt-formular__knap:hover {
-  background: #FFFCFA;
-  color: #007F24;
+  background: #145c32;
 }
 
 .kontakt-side__kort {
@@ -1488,6 +1511,39 @@ details[open] .faq-section__icon {
 
 .kontakt-side__kort a:hover {
   text-decoration: none;
+}
+
+@media (max-width: 599px) {
+  .kontakt-formular,
+  .kontakt-side__kort {
+    width: auto;
+    max-width: none;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+  .kontakt-formular,
+  .kontakt-side__kort {
+    padding: 1.2rem;
+  }
+
+  .kontakt-formular__form {
+    gap: 0.85rem;
+  }
+
+  .kontakt-formular__felt input,
+  .kontakt-formular__felt select,
+  .kontakt-formular__felt textarea {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .kontakt-formular__felt textarea {
+    min-height: 8.5rem;
+  }
+
+  .kontakt-formular__knap {
+    padding: 0.75rem 1.25rem;
+  }
 }
 
 /* =========================================
@@ -1531,7 +1587,7 @@ details[open] .faq-section__icon {
   gap: 0.6rem;
 }
 .footer__top {
-  font-family: inherit;
+  font-family: "Nunito", sans-serif;
   font-size: 1.6rem;
   font-weight: bold;
   color: #a00;
@@ -1573,7 +1629,7 @@ details[open] .faq-section__icon {
   margin-top: 0.7rem;
   margin-left: auto;
   margin-right: auto;
-  font-family: inherit;
+  font-family: "Nunito", sans-serif;
 }
 .footer__help {
   background: transparent;
@@ -1855,7 +1911,20 @@ details[open] .faq-section__icon {
   }
 }
 
+  @media (min-width: 600px) {
+    .kontakt-side__layout {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+    }
+  }
+
 /* --- DESKTOP (Grid layout, reset hover/flex til desktop) --- */
+@media (min-width: 600px) {
+  .kontakt-side__layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (min-width: 900px) {
   
   .navbar {
