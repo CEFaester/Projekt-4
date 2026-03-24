@@ -292,6 +292,7 @@ footer {
 .forside-intro {
     padding: 3rem 1.5rem;
     text-align: center;
+    text-align: left;
 }
 .forside-intro__container {
     max-width: 700px;
@@ -306,6 +307,7 @@ footer {
     font-size: 2rem;
     font-weight: 700;
     margin: 0;
+    text-align: left;
 }
 .forside-intro__tekst {
     color: #333;
