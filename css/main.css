@@ -146,6 +146,7 @@ footer {
 
 .navbar__menu-link:last-child {
   align-self: center;
+  padding: 0.2rem 1.5rem;
   border-bottom: none;
   background: #007F24;
   color: #FFFCFA;
