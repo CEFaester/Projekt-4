@@ -135,11 +135,15 @@ function visQuiz() {
 
 function visScoreModal(rolle) {
   scoreModal.style.display = 'block';
-  document.getElementById('quizAntalForsøg').textContent = quizSpørgsmål.length;
-  document.getElementById('quizForkert').textContent = '';
-  document.getElementById('quizKorrekt').textContent = '';
-  document.getElementById('quizProcent').textContent = '';
-  document.getElementById('quizBemærkning').innerHTML = `<strong>${quizRoller[rolle].titel}</strong><br>${quizRoller[rolle].beskrivelse}`;
+  const rolleObj = quizRoller[rolle];
+  const quizBemærkning = document.getElementById('quizBemærkning');
+  console.log('Quiz resultat rolle:', rolle);
+  console.log('Quiz svar:', quizSvar);
+  if (rolleObj) {
+    quizBemærkning.innerHTML = `<strong>${rolleObj.titel}</strong><br>${rolleObj.beskrivelse}`;
+  } else {
+    quizBemærkning.innerHTML = '<strong>Resultat ikke fundet</strong><br>Der opstod en fejl – prøv igen.<br>Rolle: ' + rolle;
+  }
 }
 
 function skjulScoreModal() {

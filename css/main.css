@@ -8,14 +8,15 @@ html, body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  background-color: #f4faf7;
+ 
 }
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-    background: #faf9f8;
-    line-height: 1.7;
+  line-height: 1.7;
 }
 
 footer {
@@ -561,7 +562,6 @@ details[open] .faq-section__icon {
   width: 100%;
   max-width: 40rem;
   min-height: 30rem;
-  background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -662,14 +662,14 @@ details[open] .faq-section__icon {
   outline: none;
   font-size: 1.05rem;
   transition: background 0.2s, color 0.2s;
-  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.04);
+  align-items: center;
 }
 .quiz__næste button:hover {
   background: #FF0000;
   color: #fff;
 }
 .quiz__modal {
-  display: none;
+  display: flex;
   position: fixed;
   z-index: 10;
   left: 0;
@@ -678,7 +678,6 @@ details[open] .faq-section__icon {
   height: 100vh;
   overflow: auto;
   background-color: rgba(0,0,0,0.4);
-  display: flex;
   align-items: center;
   justify-content: center;
   animation: fadeIn 1.2s ease-in-out;
@@ -693,6 +692,8 @@ details[open] .faq-section__icon {
   justify-content: space-around;
   border-radius: 25px;
   padding: 2rem 1rem;
+  border: 3px solid #FF0000;
+  box-shadow: 0 0 0 4px rgba(255,0,0,0.10);
 }
 .quiz__modal-indhold h1, .quiz__modal-indhold h2 {
   font-size: 1.3rem;
@@ -734,12 +735,19 @@ details[open] .faq-section__icon {
   background-color: #555;
 }
 #quizBemærkning {
-  display: block;
   color: #fff;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
+  font-weight: 700;
   margin: 2.2rem 0 1.2rem 0;
-  text-align: center;
-  line-height: 1.6;
+  text-align: left;
+  line-height: 1.7;
+  background: none;
+  border-radius: 0;
+  padding: 0.5rem 0.5rem;
+  box-shadow: none;
+  letter-spacing: 0.01em;
+  min-height: 6rem;
+  min-width: 80%;
 }
 @media (max-width: 700px) {
   .quiz__container {
@@ -934,7 +942,7 @@ details[open] .faq-section__icon {
   gap: 0.5rem;
   margin: 1rem 0 0.5rem 0;
 }
-}
+
 .omos-roller__dot {
   width: 12px;
   height: 12px;
