@@ -1544,6 +1544,10 @@ details[open] .faq-section__icon {
     min-height: 400px; 
   }
 
+  .omos-video {
+    background-color: #FFFCFA;
+  }
+
   /* Slip video-containeren fri */
   .omos-video__container {
     max-width: 1000px; /* Øget fra 500px */
