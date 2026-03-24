@@ -1,5 +1,8 @@
 // Sara: Quiz JS - håndterer quizzen på om-os.html
 // Lavet i samarbejde med AI (GPT-4.1) - rettet og tilpasset af Sara
+// SE AI PROMPT DOKUMENT FOR MERE INFO OM KODEN
+// Quiz inspiration: https://dev.to/sulaimonolaniran/building-a-simple-quiz-with-html-css-and-javascript-4elp-->
+
 
 // -----------------------------
 // QUIZ SPØRGSMÅL OG SVAR (A-E)
@@ -98,23 +101,22 @@ const quizRoller = {
 
 // -----------------------------
 // QUIZ FLOW OG LOOP-SEKTIONER
-// -----------------------------
+
 let quizSvar = [];
 let nuværende = 0;
 
-// Elementer
-const intro = document.getElementById('quizIntro');
-const spil = document.getElementById('quizSpil');
-const startKnap = document.getElementById('quizStartKnap');
-const næsteKnap = document.getElementById('quizNæsteKnap');
-const scoreModal = document.getElementById('quizScoreModal');
-const valgModal = document.getElementById('quizValgModal');
-const lukScore = document.getElementById('quizLukScore');
-const lukValg = document.getElementById('quizLukValg');
+const el = {
+  intro: document.getElementById('quizIntro'),
+  spil: document.getElementById('quizSpil'),
+  startKnap: document.getElementById('quizStartKnap'),
+  næsteKnap: document.getElementById('quizNæsteKnap'),
+  scoreModal: document.getElementById('quizScoreModal'),
+  valgModal: document.getElementById('quizValgModal'),
+  lukScore: document.getElementById('quizLukScore'),
+  lukValg: document.getElementById('quizLukValg'),
+  quizBemærkning: document.getElementById('quizBemærkning')
+};
 
-// -----------------------------
-// VIS SPØRGSMÅL (LOOP)
-// -----------------------------
 function visSpørgsmål() {
   const spm = quizSpørgsmål[nuværende];
   document.getElementById('quizSpørgsmålTekst').textContent = spm.tekst;
@@ -123,62 +125,51 @@ function visSpørgsmål() {
     document.getElementById('quizValg' + (i+1)).checked = false;
   }
   document.getElementById('quizNr').textContent = (nuværende+1) + ' / ' + quizSpørgsmål.length;
-  document.getElementById('quizScore').textContent = quizSvar.length;
 }
 
 function visQuiz() {
-  startKnap.style.display = 'none';
-  intro.style.display = 'none';
-  spil.style.display = 'block';
+  el.startKnap.style.display = 'none';
+  el.intro.style.display = 'none';
+  el.spil.style.display = 'block';
   visSpørgsmål();
 }
 
 function visScoreModal(rolle) {
-  scoreModal.style.display = 'flex';
+  el.scoreModal.style.display = 'flex';
   const rolleObj = quizRoller[rolle];
-  const quizBemærkning = document.getElementById('quizBemærkning');
-  console.log('Quiz resultat rolle:', rolle);
-  console.log('Quiz svar:', quizSvar);
-  if (rolleObj) {
-    quizBemærkning.innerHTML = `<strong>${rolleObj.titel}</strong><br>${rolleObj.beskrivelse}`;
-  } else {
-    quizBemærkning.innerHTML = '<strong>Resultat ikke fundet</strong><br>Der opstod en fejl – prøv igen.<br>Rolle: ' + rolle;
-  }
+  el.quizBemærkning.innerHTML = rolleObj
+    ? `<strong>${rolleObj.titel}</strong><br>${rolleObj.beskrivelse}`
+    : '<strong>Resultat ikke fundet</strong><br>Der opstod en fejl – prøv igen.<br>Rolle: ' + rolle;
 }
 
 function skjulScoreModal() {
-  scoreModal.style.display = 'none';
-  intro.style.display = 'block';
-  startKnap.style.display = 'inline-block';
-  spil.style.display = 'none';
+  el.scoreModal.style.display = 'none';
+  el.intro.style.display = 'block';
+  el.startKnap.style.display = 'inline-block';
+  el.spil.style.display = 'none';
   nuværende = 0;
   quizSvar = [];
 }
 
 function visValgModal() {
-  valgModal.style.display = 'flex';
+  el.valgModal.style.display = 'flex';
 }
 function skjulValgModal() {
-  valgModal.style.display = 'none';
+  el.valgModal.style.display = 'none';
 }
 
 function håndterSvar() {
-  // Find valgt svar (A-E)
   let valgt = -1;
   for (let i = 0; i < 5; i++) {
     if (document.getElementById('quizValg' + (i+1)).checked) valgt = i;
   }
-  if (valgt === -1) {
-    visValgModal();
-    return;
-  }
+  if (valgt === -1) return visValgModal();
   quizSvar.push(['A','B','C','D','E'][valgt]);
   nuværende++;
   if (nuværende < quizSpørgsmål.length) {
     visSpørgsmål();
   } else {
-    spil.style.display = 'none';
-    // Tæl flest forekomster
+    el.spil.style.display = 'none';
     const counts = {A:0, B:0, C:0, D:0, E:0};
     quizSvar.forEach(s => counts[s]++);
     const max = Math.max(...Object.values(counts));
@@ -187,8 +178,7 @@ function håndterSvar() {
   }
 }
 
-// Event listeners
-if (startKnap) startKnap.addEventListener('click', visQuiz);
-if (næsteKnap) næsteKnap.addEventListener('click', håndterSvar);
-if (lukScore) lukScore.addEventListener('click', skjulScoreModal);
-if (lukValg) lukValg.addEventListener('click', skjulValgModal);
+if (el.startKnap) el.startKnap.addEventListener('click', visQuiz);
+if (el.næsteKnap) el.næsteKnap.addEventListener('click', håndterSvar);
+if (el.lukScore) el.lukScore.addEventListener('click', skjulScoreModal);
+if (el.lukValg) el.lukValg.addEventListener('click', skjulValgModal);
