@@ -525,7 +525,7 @@ footer {
    EVENTS & MAP
    ========================================= */
 .map-section {
-  padding: 2.5rem 2rem 1.5rem 2rem;
+  padding: 1.25rem 2rem 1.5rem 2rem;
   text-align: center;
 }
 
@@ -704,9 +704,14 @@ footer {
    FAQ SEKTION 
    ========================================= */
 
-.faq-section, .faq-top {
-    margin: 2.5rem 0 2.5rem 0;
-    padding: 0 20px;
+.faq-top {
+  margin: 0 0 2.5rem 0;
+  padding: 1.25rem 20px 0 20px;
+}
+
+.faq-section {
+  margin: 0 0 2.5rem 0;
+  padding: 0 20px;
 }
 
 .faq-top__title {
@@ -1431,7 +1436,7 @@ details[open] .faq-section__icon {
 /*Kontakt side */
 
 .kontakt-side {
-  padding: 2.5rem 1.25rem;
+  padding: 1.25rem 1.25rem 2.5rem 1.25rem;
 }
 
 .kontakt-side__container {
