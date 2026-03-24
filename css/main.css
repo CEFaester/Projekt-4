@@ -553,6 +553,188 @@ details[open] .faq-section__icon {
   color: #fff;
 }
 
+.quiz__container {
+  width: 100%;
+  max-width: 40rem;
+  min-height: 30rem;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 30px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+}
+.quiz__status {
+  width: 80%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.quiz__status h2 {
+  font-size: 1.2rem;
+}
+.quiz__spørgsmål {
+  width: 80%;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #bbb;
+  border-radius: 25px;
+}
+.quiz__spørgsmål h3 {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 3px;
+}
+.quiz__valg {
+  width: 80%;
+  height: 12rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.quiz__valg span {
+  width: 45%;
+  height: 3rem;
+  border: 2px solid #bbb;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+.quiz__option {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  font-weight: 600;
+  color: #161616;
+}
+.quiz__option:hover {
+  transform: scale(1.12);
+  color: #fff;
+  background: #FF0000;
+}
+.quiz__radio {
+  position: relative;
+  display: none;
+}
+.quiz__radio:checked + .quiz__option {
+  background: paleturquoise;
+}
+.quiz__næste {
+  width: 50%;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+}
+.quiz__næste button {
+  width: 8rem;
+  height: 2rem;
+  border-radius: 10px;
+  background: none;
+  color: #191919;
+  font-weight: 600;
+  border: 2px solid #888;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s;
+}
+.quiz__næste button:hover {
+  background-color: #e94f4f;
+  color: #fff;
+}
+.quiz__modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+.quiz__modal-indhold {
+  min-height: 20rem;
+  width: 25rem;
+  background-color: #2b2a2a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 25px;
+  padding: 2rem 1rem;
+}
+.quiz__modal-indhold h1, .quiz__modal-indhold h2 {
+  font-size: 1.3rem;
+  color: #f5f5f5;
+  text-align: center;
+}
+.quiz__resultat {
+  width: 15rem;
+  min-height: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.quiz__resultat p {
+  color: #fff;
+  text-align: center;
+}
+.quiz__modal-knap {
+  height: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quiz__modal-knap button {
+  width: 10rem;
+  height: 2rem;
+  background: none;
+  outline: none;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background 0.2s;
+}
+.quiz__modal-knap button:hover {
+  background-color: #555;
+}
+@media (max-width: 700px) {
+  .quiz__container {
+    max-width: 95vw;
+    min-height: 80vh;
+    padding: 0.5rem;
+  }
+  .quiz__modal-indhold {
+    width: 90vw;
+    min-height: 18rem;
+  }
+  .quiz__valg span {
+    width: 90%;
+    height: 2.5rem;
+  }
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
 
 /* =========================================
    OM OS SIDE 
