@@ -197,7 +197,8 @@ footer {
 .hero-slider .hero-buttons {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 294px;
+  align-items: center;
   gap: 10px;
 }
 
@@ -208,7 +209,10 @@ footer {
   padding: 10px 20px;
   border-radius: 6px;
   text-decoration: none;
-  width: 100%;
+  
+  width: 80%; 
+  max-width: 300px; 
+  
   text-align: center;
   white-space: nowrap;
 }
@@ -432,7 +436,7 @@ footer {
 
 
 /* =========================================
-   FAQ SEKTION (Tilbageført)
+   FAQ SEKTION 
    ========================================= */
 
 .faq-section, .faq-top {
