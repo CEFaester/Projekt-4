@@ -41,6 +41,70 @@
             <div class="kontakt-side__container">
                 <h1>Kontakt</h1>
                 <p class="kontakt-side__text">Har du spørgsmål om frivillighed hos SIND, er du altid velkommen til at tage fat i os. Herunder finder du vores kontaktoplysninger.</p>
+
+                <div class="kontakt-side__layout">
+                    <section class="kontakt-formular" aria-labelledby="kontaktFormTitel">
+                        <h2 id="kontaktFormTitel" class="kontakt-formular__titel">Send os en besked</h2>
+                        <p class="kontakt-formular__intro">Udfyld formularen, så vender vi tilbage hurtigst muligt.</p>
+
+                        <form class="kontakt-formular__form" action="#" method="post">
+                            <div class="kontakt-formular__felt">
+                                <label for="kontaktNavn">Navn</label>
+                                <input id="kontaktNavn" name="navn" type="text" autocomplete="name" required>
+                            </div>
+
+                            <div class="kontakt-formular__felt kontakt-formular__felt--half">
+                                <label for="kontaktEmail">E-mail</label>
+                                <input id="kontaktEmail" name="email" type="email" autocomplete="email" required>
+                            </div>
+
+                            <div class="kontakt-formular__felt kontakt-formular__felt--half">
+                                <label for="kontaktTelefon">Telefon</label>
+                                <input id="kontaktTelefon" name="telefon" type="tel" autocomplete="tel">
+                            </div>
+
+                            <div class="kontakt-formular__felt">
+                                <label for="kontaktEmne">Emne</label>
+                                <select id="kontaktEmne" name="emne" required>
+                                    <option value="">Vælg et emne</option>
+                                    <option value="frivillig">Jeg vil gerne være frivillig</option>
+                                    <option value="sporgsmaal">Jeg har et spørgsmål</option>
+                                    <option value="samarbejde">Samarbejde</option>
+                                    <option value="andet">Andet</option>
+                                </select>
+                            </div>
+
+                            <div class="kontakt-formular__felt">
+                                <label for="kontaktBesked">Besked</label>
+                                <textarea id="kontaktBesked" name="besked" rows="6" required></textarea>
+                            </div>
+
+                            <div class="kontakt-formular__samtykke">
+                                <input id="kontaktSamtykke" name="samtykke" type="checkbox" required>
+                                <label for="kontaktSamtykke">Jeg accepterer, at SIND må kontakte mig vedrørende min henvendelse.</label>
+                            </div>
+
+                            <button class="kontakt-formular__knap" type="submit">Send besked</button>
+                        </form>
+                    </section>
+
+                    <aside class="kontakt-side__kort" aria-label="Kontaktoplysninger">
+                        <h2 class="kontakt-side__kort-titel">Direkte kontakt</h2>
+                        <p>Du kan også kontakte os direkte, hvis du hellere vil skrive eller ringe.</p>
+                        <div class="kontakt-side__kort-blok">
+                            <h6>Adresse</h6>
+                            <p>SIND - Landsforeningen for psykisk sundhed<br>Blekinge Boulevard 2<br>2630 Taastrup</p>
+                        </div>
+                        <div class="kontakt-side__kort-blok">
+                            <h6>Telefon</h6>
+                            <p><a href="tel:+4535240750">35 24 07 50</a></p>
+                        </div>
+                        <div class="kontakt-side__kort-blok">
+                            <h6>E-mail</h6>
+                            <p><a href="mailto:landsforeningen@sind.dk">landsforeningen@sind.dk</a></p>
+                        </div>
+                    </aside>
+                </div>
             </div>
         </main>
 

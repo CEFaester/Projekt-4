@@ -1354,13 +1354,138 @@ details[open] .faq-section__icon {
 }
 
 .kontakt-side__container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .kontakt-side__text {
   max-width: 42rem;
   color: #444;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+
+.kontakt-side__layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.kontakt-formular,
+.kontakt-side__kort {
+  background: #F8FCFA;
+  border: 1px solid #cc0000;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  padding: 1.5rem;
+}
+
+.kontakt-formular__titel,
+.kontakt-side__kort-titel {
+  color: #cc0000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.kontakt-formular__intro,
+.kontakt-side__kort p {
+  color: #333;
+}
+
+.kontakt-formular__form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.kontakt-formular__felt,
+.kontakt-formular__samtykke,
+.kontakt-formular__knap {
+  grid-column: 1 / -1;
+}
+
+.kontakt-formular__felt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.kontakt-formular__felt label,
+.kontakt-formular__samtykke label {
+  color: #222;
+  font-weight: 500;
+}
+
+.kontakt-formular__felt input,
+.kontakt-formular__felt select,
+.kontakt-formular__felt textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  font: inherit;
+  color: #222;
+  background: #FFFCFA;
+  border: 1px solid #cfcfcf;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.kontakt-formular__felt textarea {
+  resize: vertical;
+  min-height: 10rem;
+}
+
+.kontakt-formular__felt input:focus,
+.kontakt-formular__felt select:focus,
+.kontakt-formular__felt textarea:focus {
+  outline: 2px solid rgba(204, 0, 0, 0.2);
+  border-color: #cc0000;
+}
+
+.kontakt-formular__samtykke {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.kontakt-formular__samtykke input {
+  margin-top: 0.2rem;
+}
+
+.kontakt-formular__knap {
+  justify-self: start;
+  padding: 0.8rem 1.5rem;
+  font: inherit;
+  font-weight: 700;
+  color: #FFFCFA;
+  background: #007F24;
+  border: 2px solid #007F24;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.kontakt-formular__knap:hover {
+  background: #FFFCFA;
+  color: #007F24;
+}
+
+.kontakt-side__kort {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.kontakt-side__kort-blok p {
+  margin: 0.35rem 0 0 0;
+}
+
+.kontakt-side__kort a {
+  color: #2d3a4a;
+  text-decoration: underline;
+}
+
+.kontakt-side__kort a:hover {
+  text-decoration: none;
 }
 
 /* =========================================
@@ -1557,6 +1682,19 @@ details[open] .faq-section__icon {
   
   .navbar {
     min-height: 90px;
+
+  .kontakt-side__layout {
+    grid-template-columns: minmax(0, 1.6fr) minmax(18rem, 1fr);
+    align-items: start;
+  }
+
+  .kontakt-formular__form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .kontakt-formular__felt--half {
+    grid-column: span 1;
+  }
     padding-top: 12px;
     padding-bottom: 12px;
   }
