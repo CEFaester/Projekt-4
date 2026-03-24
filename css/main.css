@@ -287,6 +287,155 @@ footer {
 }
 
 /* =========================================
+   FORSIDE - INTRO & MELLEM TEKST
+   ========================================= */
+.forside-intro {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+.forside-intro__container {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+.forside-intro__overskrift {
+    color: #cc0000;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+.forside-intro__tekst {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+}
+
+/* =========================================
+   FORSIDE - IKON BANNER
+   ========================================= */
+.forside-banner {
+    background-color: #F4FAF7;
+    padding: 3rem 1rem;
+    width: 100%;
+}
+.forside-banner__container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Gør at de falder ned på næste linje, hvis skærmen er helt lille */
+    gap: 2rem;
+}
+.forside-banner__ikon {
+    width: 30%;
+    max-width: 120px;
+    object-fit: contain;
+}
+
+/* =========================================
+   FORSIDE - ANMELDELSER (REVIEW CAROUSEL)
+   ========================================= */
+.forside-anmeldelser {
+    position: relative;
+    padding: 2rem 0;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.forside-anmeldelser__karousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    scrollbar-width: none; /* Skjuler scrollbar */
+}
+.forside-anmeldelser__karousel::-webkit-scrollbar {
+    display: none;
+}
+.forside-anmeldelser__pil {
+    display: none; /* Skjult på mobil */
+}
+
+/* Mobil-design for selve kortet (Billede i top, tekst i bund) */
+.forside-anmeldelser__kort {
+    flex: 0 0 85vw; /* Fylder 85% af skærmen på mobil */
+    max-width: 350px;
+    scroll-snap-align: center;
+    background-color: #F4FAF7;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Stabler elementerne ovenpå hinanden */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+.forside-anmeldelser__billede {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.forside-anmeldelser__indhold {
+    padding: 2rem 1.5rem;
+    text-align: left;
+}
+.forside-anmeldelser__navn {
+    color: #cc0000;
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0;
+}
+.forside-anmeldelser__tekst {
+    color: #444;
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0;
+}
+
+/* =========================================
+   FORSIDE - BUND BOKS MED KNAP
+   ========================================= */
+.forside-bund {
+    padding: 3rem 1.5rem 4rem 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+.forside-bund__boks {
+    background-color: #2b2a2a; /* Mørk baggrund, tilpas hvis den skal være rød eller grøn */
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    width: 100%;
+    max-width: 800px;
+    min-height: 250px; /* Sikrer at kassen har en god højde */
+    
+    /* Flexbox magi til at placere knappen nederst til venstre */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligner alt til venstre */
+    text-align: left;
+}
+.forside-bund__overskrift {
+    color: #fff;
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem 0;
+}
+.forside-bund__tekst {
+    color: #ddd;
+    font-size: 1.1rem;
+    margin: 0 0 2rem 0;
+}
+.forside-bund__knap {
+    margin-top: auto; /* Magien! Skubber knappen helt ned i bunden af kassen */
+    background-color: #007F24;
+    color: #fff;
+    border: none;
+    /* Kopier evt. styling fra dine andre knapper her */
+}
+
+/* =========================================
    EVENTS & MAP
    ========================================= */
 .map-section {
@@ -1583,6 +1732,88 @@ details[open] .faq-section__icon {
     flex: auto;
     width: 294px;
     margin: 0 auto;
+  }
+  
+  /* Forside Desktop Justeringer */
+  .forside-intro {
+      padding: 5rem 2rem;
+  }
+  .forside-intro__overskrift {
+      font-size: 2.7rem;
+  }
+  
+  .forside-banner {
+      padding: 4rem 2rem;
+  }
+  .forside-banner__ikon {
+      max-width: 160px;
+  }
+
+  /* REVIEW CAROUSEL - OMDANNES TIL BREDE KORT */
+  .forside-anmeldelser {
+      padding: 3rem 40px; /* Giver plads til pilene ude i siderne */
+  }
+  .forside-anmeldelser__karousel {
+      padding: 1rem 0 3rem 0;
+      gap: 2rem;
+  }
+  
+  .forside-anmeldelser__kort {
+      flex: 0 0 800px; /* Kortet bliver meget bredere */
+      flex-direction: row; /* NYT: Skifter layout fra lodret til vandret! */
+      align-items: stretch;
+      max-width: 100%;
+  }
+  
+  .forside-anmeldelser__billede {
+      width: 45%; /* Billedet fylder venstre side */
+      height: auto; /* Højden tilpasser sig tekstens mængde */
+      min-height: 300px;
+  }
+  
+  .forside-anmeldelser__indhold {
+      width: 55%; /* Teksten fylder højre side */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 3rem;
+  }
+  
+  .forside-anmeldelser__navn {
+      font-size: 1.6rem;
+  }
+  .forside-anmeldelser__tekst {
+      font-size: 1.1rem;
+  }
+
+  /* Vis og placer pilene på desktop */
+  .forside-anmeldelser__pil {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      background-color: #fff;
+      border: 2px solid #cc0000;
+      color: #cc0000;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.3s, color 0.3s;
+  }
+  .forside-anmeldelser__pil:hover {
+      background-color: #cc0000;
+      color: #fff;
+  }
+  .forside-anmeldelser__pil--venstre {
+      left: 0;
+  }
+  .forside-anmeldelser__pil--højre {
+      right: 0;
   }
   
 /* 1. Den overordnede container til Om Os */
