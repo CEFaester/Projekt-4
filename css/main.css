@@ -319,22 +319,47 @@ footer {
    ========================================= */
 .forside-banner {
     background-color: #F4FAF7;
-    padding: 3rem 1rem;
+    padding: 2.5rem 1rem; /* Lidt luft i top og bund */
     width: 100%;
+    box-sizing: border-box; /* Sikrer at padding ikke gør sektionen for bred */
+    overflow: hidden; /* Sikkerhedsnet der forhindrer horisontal scrolling */
 }
 .forside-banner__container {
     max-width: 900px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap; /* Gør at de falder ned på næste linje, hvis skærmen er helt lille */
-    gap: 2rem;
+    justify-content: space-between; /* Spreder de tre kasser pænt ud */
+    align-items: flex-start; 
+    flex-wrap: nowrap; /* Tvinger dem til altid at blive på én linje */
+    gap: 10px; /* Lidt luft imellem kasserne */
 }
+
+/* Element: Den kasse der holder ikon + tekst samlet */
+.forside-banner__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 33%; /* Sørger for at de tre kasser deler pladsen præcis lige over */
+    gap: 12px; /* Luft mellem ikonet og titlen */
+}
+
+/* Gør ikonerne markant mindre på mobil */
 .forside-banner__ikon {
-    width: 30%;
-    max-width: 120px;
+    width: 100%;
+    max-width: 60px; /* NYT: Skruet ned til 60px så de snildt kan være der */
+    height: auto;
     object-fit: contain;
+}
+
+/* Titlen under ikonet */
+.forside-banner__titel {
+    color: #333;
+    font-size: 0.95rem; 
+    font-weight: 700;
+    margin: 0;
+    /* Sikrer at meget lange ord bindestregs-deles i stedet for at skubbe layoutet */
+    word-break: break-word; 
 }
 
 /* =========================================
@@ -1815,7 +1840,7 @@ details[open] .faq-section__icon {
   .forside-anmeldelser__pil--højre {
       right: 0;
   }
-  
+
 /* 1. Den overordnede container til Om Os */
   .omos {
     max-width: 1200px; /* NYT: Øget fra 900px (eller slet for 100% bredde) */
