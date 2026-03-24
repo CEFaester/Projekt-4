@@ -175,13 +175,26 @@ footer {
 }
 
 .hero-slider .hero-content {
-  margin: 0 16px;
-  max-width: 100%;
+  margin: auto;
+  /* NYT: calc() sørger for, at kassen ved præcis hvor bred skærmen er, 
+     når vi trækker dine 16px margin fra i hver side. */
+  width: calc(100% - 32px); 
   display: flex;
   flex-direction: column;
   gap: 12px;
   color: white;
   text-align: left;
+}
+
+.hero-slider .hero-buttons {
+  display: flex;
+  flex-direction: column;
+  /* ÆNDRET: Din faste bredde er bevaret, så de ikke skifter størrelse, 
+     men nu passer den rent faktisk på en mobilskærm! */
+  width: 294px; 
+  /* NYT: Tvinger selve knap-kassen perfekt ind i midten */
+  align-self: center; 
+  gap: 10px;
 }
 
 .hero-slider .hero-content h1 {
@@ -192,14 +205,6 @@ footer {
 .hero-slider .hero-content p {
   font-size: 0.95rem;
   margin-bottom: 12px;
-}
-
-.hero-slider .hero-buttons {
-  display: flex;
-  flex-direction: column;
-  width: 294px;
-  align-items: center;
-  gap: 10px;
 }
 
 .hero-slider .btn-primary,
