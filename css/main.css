@@ -371,61 +371,113 @@ footer {
 }
 
 /* =========================================
-   FORSIDE - ANMELDELSER (REVIEW CAROUSEL)
+   FORSIDE - ANMELDELSER
    ========================================= */
 .forside-anmeldelser {
     position: relative;
-    padding: 2rem 0;
+  padding: 2.5rem 1rem;
     width: 100%;
-    max-width: 1000px;
+  max-width: 900px;
     margin: 0 auto;
 }
 .forside-anmeldelser__karousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 1.5rem;
-    padding: 1rem 1.5rem 2rem 1.5rem;
-    scrollbar-width: none; /* Skjuler scrollbar */
+  -webkit-overflow-scrolling: touch;
+  gap: 1rem;
+  padding: 0 1rem 0.5rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 .forside-anmeldelser__karousel::-webkit-scrollbar {
     display: none;
 }
-.forside-anmeldelser__pil {
-    display: none; /* Skjult på mobil */
-}
-
-/* Mobil-design for selve kortet (Billede i top, tekst i bund) */
 .forside-anmeldelser__kort {
-    flex: 0 0 85vw; /* Fylder 85% af skærmen på mobil */
-    max-width: 350px;
+  flex: 0 0 294px;
+  width: 294px;
+  max-width: 294px;
+  min-height: 293px;
     scroll-snap-align: center;
-    background-color: #F4FAF7;
-    border-radius: 12px;
-    overflow: hidden;
+  margin: 0 auto;
+  box-sizing: border-box;
     display: flex;
-    flex-direction: column; /* Stabler elementerne ovenpå hinanden */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #F8FCFA;
+  border: 1px solid #cc0000;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
 }
-.forside-anmeldelser__billede {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+.forside-anmeldelser__portraet-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.forside-anmeldelser__portraet {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+.forside-anmeldelser__portraet--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #cc0000, #e94f4f);
+  color: #fff;
+}
+.forside-anmeldelser__initialer {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
 }
 .forside-anmeldelser__indhold {
-    padding: 2rem 1.5rem;
-    text-align: left;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
 }
 .forside-anmeldelser__navn {
     color: #cc0000;
-    font-size: 1.3rem;
-    margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
 }
 .forside-anmeldelser__tekst {
-    color: #444;
+  color: #222;
     font-size: 1rem;
-    font-style: italic;
+  line-height: 1.5;
     margin: 0;
+}
+.forside-anmeldelser__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0 0.5rem;
+}
+.forside-anmeldelser__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  border: 1px solid #000;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: inline-block;
+}
+.forside-anmeldelser__dot.active {
+  background: #e94f4f;
 }
 
 /* =========================================
@@ -1127,8 +1179,10 @@ details[open] .faq-section__icon {
     width: 100%;
 }
 .omos-roller__kort {
-    flex: 0 0 80vw;
-    max-width: 400px;
+  flex: 0 0 294px;
+  width: 294px;
+  max-width: 294px;
+  min-height: 293px;
     scroll-snap-align: center;
     margin: 0 auto;
     box-sizing: border-box;
@@ -1189,6 +1243,26 @@ details[open] .faq-section__icon {
 }
 .omos-roller__dot.active {
   background: #e94f4f;
+}
+
+@media (max-width: 699px) {
+  .omos-roller__karousel {
+    gap: 1rem;
+    padding: 0 1rem 0.5rem;
+  }
+
+  .omos-roller__kortliste {
+    gap: 1rem;
+  }
+
+  .omos-roller__kort {
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .omos-roller__kort-tekst {
+    padding: 0;
+  }
 }
 
 /* Ingen dots på desktop, da det er en karousel lavet til mobil. */
@@ -2020,34 +2094,33 @@ details[open] .faq-section__icon {
       height: 100px; 
   }
 
-  /* REVIEW CAROUSEL - OMDANNES TIL BREDE KORT */
   .forside-anmeldelser {
-      padding: 3rem 40px; /* Giver plads til pilene ude i siderne */
+      max-width: 1200px;
+      padding: 3rem 1rem;
   }
   .forside-anmeldelser__karousel {
-      padding: 1rem 0 3rem 0;
-      gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      overflow: visible;
+      padding: 2rem 0 0;
+      scroll-snap-type: none;
   }
   
   .forside-anmeldelser__kort {
-      flex: 0 0 800px; /* Kortet bliver meget bredere */
-      flex-direction: row; /* NYT: Skifter layout fra lodret til vandret! */
-      align-items: stretch;
+      width: auto;
       max-width: 100%;
+      min-height: 320px;
+      margin: 0;
   }
   
-  .forside-anmeldelser__billede {
-      width: 45%; /* Billedet fylder venstre side */
-      height: auto; /* Højden tilpasser sig tekstens mængde */
-      min-height: 300px;
+    .forside-anmeldelser__portraet {
+      width: 88px;
+      height: 88px;
   }
   
   .forside-anmeldelser__indhold {
-      width: 55%; /* Teksten fylder højre side */
-      display: flex;
-      flex-direction: column;
       justify-content: center;
-      padding: 3rem;
   }
   
   .forside-anmeldelser__navn {
@@ -2056,36 +2129,9 @@ details[open] .faq-section__icon {
   .forside-anmeldelser__tekst {
       font-size: 1.1rem;
   }
-
-  /* Vis og placer pilene på desktop */
-  .forside-anmeldelser__pil {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 48px;
-      height: 48px;
-      background-color: #fff;
-      border: 2px solid #cc0000;
-      color: #cc0000;
-      border-radius: 50%;
-      font-size: 1.5rem;
-      cursor: pointer;
-      z-index: 10;
-      transition: background 0.3s, color 0.3s;
-  }
-  .forside-anmeldelser__pil:hover {
-      background-color: #cc0000;
-      color: #fff;
-  }
-  .forside-anmeldelser__pil--venstre {
-      left: 0;
-  }
-  .forside-anmeldelser__pil--højre {
-      right: 0;
-  }
+    .forside-anmeldelser__dots {
+      display: none;
+    }
 
 /* 1. Den overordnede container til Om Os */
   .omos {

@@ -8,6 +8,7 @@
     <title>Forside</title>
 
     <script src="js/billedecarousel.js" defer></script>
+    <script src="js/forsideanmeldelser.js" defer></script>
     <script src="js/scrolltotop.js" defer></script>
     <script src="js/burgermenu.js" defer></script>
 
@@ -84,28 +85,30 @@
     </section>
 
     <section class="forside-anmeldelser">
-        <button class="forside-anmeldelser__pil forside-anmeldelser__pil--venstre">&#10094;</button>
-        <button class="forside-anmeldelser__pil forside-anmeldelser__pil--højre">&#10095;</button>
-        
-        <div class="forside-anmeldelser__karousel">
-            
-            <div class="forside-anmeldelser__kort">
-                <img src="img/sind__persona__sofie__forside.webp" alt="Sofie" class="forside-anmeldelser__billede">
+        <div class="forside-anmeldelser__karousel" id="forsideAnmeldelserKarousel">
+            <article class="forside-anmeldelser__kort">
+                <div class="forside-anmeldelser__portraet-wrap">
+                    <img src="img/sind__persona__sofie__forside.webp" alt="Sofie" class="forside-anmeldelser__portraet">
+                </div>
                 <div class="forside-anmeldelser__indhold">
                     <h3 class="forside-anmeldelser__navn">Sofie, 24 år</h3>
                     <p class="forside-anmeldelser__tekst">"Det har været en fantastisk oplevelse. Fællesskabet er stærkt, og jeg føler mig altid velkommen. Det kan klart anbefales!"</p>
                 </div>
-            </div>
+            </article>
 
-            <div class="forside-anmeldelser__kort">
-                <img src="img/sind__persona__sofie__forside.webp" alt="Sofie" class="forside-anmeldelser__billede">
+            <article class="forside-anmeldelser__kort">
+                <div class="forside-anmeldelser__portraet-wrap">
+                    <div class="forside-anmeldelser__portraet forside-anmeldelser__portraet--placeholder" aria-label="Portrætillustration af Jens" role="img">
+                        <span class="forside-anmeldelser__initialer">J</span>
+                    </div>
+                </div>
                 <div class="forside-anmeldelser__indhold">
                     <h3 class="forside-anmeldelser__navn">Jens, 31 år</h3>
                     <p class="forside-anmeldelser__tekst">"Trygheden og fleksibiliteten gør, at jeg kan være med på mine egne præmisser. Det betyder alt for mig i hverdagen."</p>
                 </div>
-            </div>
-
+            </article>
         </div>
+        <div class="forside-anmeldelser__dots" id="forsideAnmeldelserDots" aria-label="Navigation til anmeldelser"></div>
     </section>
 
     <section class="forside-bund">
