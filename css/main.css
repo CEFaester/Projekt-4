@@ -1140,14 +1140,39 @@ details[open] .faq-section__icon {
     text-align: left;
 }
 
+/* =========================================
+   BANNER - BLIV FRIVILLIG
+   ========================================= */
+#banner__blivFrivillig {
+  background: #FFFCFA;
+  padding: 2.5rem 2rem 1.5rem 2rem;
+  text-align: center;
+  border-top: 2px solid #0f726b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
 
 /* =========================================
    FOOTER
    ========================================= */
-.footer {
-  background: #f7fcfa;
-  color: #333;
+#banner__blivFrivillig {
+  background: #FFFCFA;
   padding: 2.5rem 2rem 1.5rem 2rem;
+  text-align: left;
+  border-top: 2px solid #0f726b;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.footer {
+  background: #f5faf7;
+  color: #333;
+  padding: 0 2rem 1.5rem 2rem;
   text-align: left;
   border-top: 2px solid #0f726b;
   display: flex;
@@ -1160,14 +1185,14 @@ details[open] .faq-section__icon {
   font-size: 1.6rem;
   font-weight: bold;
   color: #a00;
-  background: #f5faf7;
+  background: none;
   border-radius: 8px;
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 0.7rem;
   max-width: 900px;
-  align-self: flex-start;
-  text-align: left;
+  align-self: center;
+  text-align: center;
   margin-bottom: 0.3rem;
 }
 .footer__sub {
@@ -1175,15 +1200,15 @@ details[open] .faq-section__icon {
   margin-bottom: 0.7rem;
   color: #222;
   max-width: 900px;
-  align-self: flex-start;
-  text-align: left;
+  align-self: center;
+  text-align: center;
   margin-bottom: 0.3rem;
 }
 .footer__action {
   margin-bottom: 1rem;
   max-width: 900px;
-  align-self: flex-start;
-  text-align: left;
+  align-self: center;
+  text-align: center;
   margin-bottom: 0.3rem;
 }
 .footer__action-btn {
@@ -1196,7 +1221,8 @@ details[open] .faq-section__icon {
   cursor: pointer;
   font-weight: bold;
   margin-top: 0.7rem;
-  margin-left: 0;
+  margin-left: auto;
+  margin-right: auto;
   font-family: inherit;
 }
 .footer__help {
