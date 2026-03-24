@@ -917,10 +917,11 @@ details[open] .faq-section__icon {
     width: 100%;
 }
 .omos-roller__kort {
-    flex: 0 0 90vw;
+    flex: 0 0 80vw;
     max-width: 400px;
     scroll-snap-align: center;
     margin: 0 auto;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
