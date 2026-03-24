@@ -456,16 +456,16 @@ footer {
   gap: 0.75rem;
 }
 .forside-anmeldelser__navn {
-    color: #cc0000;
+  color: #cc0000;
   font-size: 1.25rem;
   font-weight: 700;
   margin: 0;
 }
 .forside-anmeldelser__tekst {
   color: #222;
-    font-size: 1rem;
+  font-size: 1rem;
   line-height: 1.5;
-    margin: 0;
+  margin: 0;
 }
 .forside-anmeldelser__dots {
   display: flex;
@@ -497,12 +497,14 @@ footer {
     justify-content: center;
 }
 .forside-bund__boks {
-    background-color: #2b2a2a; /* Mørk baggrund, tilpas hvis den skal være rød eller grøn */
-    border-radius: 16px;
+    background-color: #F4FAF7; /* Mørk baggrund, tilpas hvis den skal være rød eller grøn */
+    border-radius: 6px;
+    border: 1px solid #cc0000;
     padding: 2.5rem 2rem;
     width: 100%;
     max-width: 800px;
     min-height: 250px; /* Sikrer at kassen har en god højde */
+
     
     /* Flexbox magi til at placere knappen nederst til venstre */
     display: flex;
@@ -511,20 +513,23 @@ footer {
     text-align: left;
 }
 .forside-bund__overskrift {
-    color: #fff;
+    color: #cc0000;
     font-size: 1.8rem;
     margin: 0 0 0.5rem 0;
 }
 .forside-bund__tekst {
-    color: #ddd;
+    color: #222;
     font-size: 1.1rem;
     margin: 0 0 2rem 0;
 }
+
 .forside-bund__knap {
-    margin-top: auto; /* Magien! Skubber knappen helt ned i bunden af kassen */
-    background-color: #007F24;
-    color: #fff;
-    border: none;
+  margin-top: auto;
+  width: 80%;
+  padding: .5rem .5rem .5rem .5rem;
+  background-color: #007F24;
+  color: #fff;
+  border: none;
   display: inline-block;
   text-decoration: none;
 }
