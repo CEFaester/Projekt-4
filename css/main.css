@@ -542,15 +542,15 @@ details[open] .faq-section__icon {
     gap: 2.2rem;
 }
 .quiz__overskrift {
-  color: #FF0000;
+  color: #cc0000;
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 10px;
   text-align: center;
 }
 .quiz__cta {
-  color: #FF0000;
-  border: 2px solid #FF0000;
+  color: #cc0000;
+  border: 2px solid #cc0000;
   background: none;
   border-radius: 10px;
   padding: 0.7rem 2rem;
