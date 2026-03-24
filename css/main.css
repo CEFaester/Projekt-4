@@ -318,16 +318,22 @@ footer {
     margin: 0 0 1rem 0;
 }
 
-.btn-primary {
-  width: 100%;
-  padding: .5rem 0 .5rem 0;
-  font-family: "Nunito", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 6px;
-  background-color: #F4FAF7;
-  border: 1px solid #cc0000;
+.forside-intro__container > .btn-primary {
   color: #cc0000;
+  border: 2px solid #cc0000;
+  background: none;
+  border-radius: 10px;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.forside-intro__container > .btn-primary:hover {
+  background: #cc0000;
+  color: #fff;
 }
 
 /* =========================================
@@ -813,7 +819,7 @@ details[open] .faq-section__icon {
 .quiz__container {
   background: #fff;
   border-radius: 24px;
-  box-shadow: 0 4px 24px 0 rgba(255,0,0,0.07);
+  box-shadow: 0 4px 24px 0 rgba(204,0,0,0.07);
     padding: 3rem 2.5rem 3rem 2.5rem;
   max-width: 600px;
   width: 100%;
@@ -841,7 +847,7 @@ details[open] .faq-section__icon {
   transition: background 0.2s, color 0.2s;
 }
 .quiz__cta:hover {
-  background: #FF0000;
+  background: #cc0000;
   color: #fff;
 }
 
@@ -859,6 +865,7 @@ details[open] .faq-section__icon {
 }
 .quiz__status {
   width: 90%;
+  margin-inline: auto;
   min-height: 4rem;
   display: flex;
   justify-content: space-around;
@@ -870,6 +877,7 @@ details[open] .faq-section__icon {
 }
 .quiz__spørgsmål {
   width: 90%;
+  margin-inline: auto;
   min-height: 7rem;
   display: flex;
   align-items: center;
@@ -886,6 +894,7 @@ details[open] .faq-section__icon {
 }
 .quiz__valg {
   width: 90%;
+  margin-inline: auto;
   min-height: 13rem;
   display: flex;
   flex-wrap: wrap;
@@ -920,19 +929,19 @@ details[open] .faq-section__icon {
 }
 .quiz__option:hover {
   transform: scale(1.08);
-  color: #FF0000;
+  color: #cc0000;
   background: #ffeaea;
-  border: 2px solid #FF0000;
+  border: 2px solid #cc0000;
 }
 .quiz__radio {
   position: relative;
   display: none;
 }
 .quiz__radio:checked + .quiz__option {
-  background: #FF0000;
+  background: #cc0000;
   color: #fff;
-  border: 2px solid #FF0000;
-  box-shadow: 0 2px 8px 0 rgba(255,0,0,0.10);
+  border: 2px solid #cc0000;
+  box-shadow: 0 2px 8px 0 rgba(204,0,0,0.10);
 }
 .quiz__næste {
   flex-basis: 100%;
@@ -948,10 +957,10 @@ details[open] .faq-section__icon {
   height: 2.3rem;
   border-radius: 12px;
   background: #fff;
-  color: #FF0000;
+  color: #cc0000;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
-  border: 2px solid #FF0000;
+  border: 2px solid #cc0000;
   cursor: pointer;
   outline: none;
   font-size: 1.05rem;
@@ -959,7 +968,7 @@ details[open] .faq-section__icon {
   align-items: center;
 }
 .quiz__næste button:hover {
-  background: #FF0000;
+  background: #cc0000;
   color: #fff;
 }
 .quiz__modal {
@@ -986,8 +995,8 @@ details[open] .faq-section__icon {
   justify-content: space-around;
   border-radius: 25px;
   padding: 1.5rem 1rem;
-  border: 3px solid #FF0000;
-  box-shadow: 0 0 0 4px rgba(255,0,0,0.10);
+  border: 1px solid #cc0000;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
 }
 .quiz__modal-indhold h1, .quiz__modal-indhold h2 {
   font-size: 1.1rem;
