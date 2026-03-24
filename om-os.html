@@ -164,7 +164,6 @@
                 </div>
             <div class="quiz__spil" id="quizSpil" style="display:none;">
                 <div class="quiz__status">
-                    <h2>Score: <span id="quizScore"></span></h2>
                     <h2>Spørgsmål: <span id="quizNr"></span></h2>
                 </div>
                 <div class="quiz__spørgsmål">
@@ -187,6 +186,10 @@
                         <input type="radio" id="quizValg4" name="quizValg" class="quiz__radio" value="D" />
                         <label for="quizValg4" class="quiz__option" id="quizValg4Label"></label>
                     </span>
+                    <span>
+                        <input type="radio" id="quizValg5" name="quizValg" class="quiz__radio" value="E" />
+                        <label for="quizValg5" class="quiz__option" id="quizValg5Label"></label>
+                    </span>
                 </div>
                 <div class="quiz__næste">
                     <button type="button" id="quizNæsteKnap">Næste spørgsmål</button>
@@ -197,10 +200,6 @@
                 <div class="quiz__modal-indhold">
                     <h1>Tillykke, quiz gennemført!</h1>
                     <div class="quiz__resultat">
-                        <p>Forsøg: <span id="quizAntalForsøg"></span></p>
-                        <p>Forkerte svar: <span id="quizForkert"></span></p>
-                        <p>Korrekte svar: <span id="quizKorrekt"></span></p>
-                        <p>Procent: <span id="quizProcent"></span>%</p>
                         <p><span id="quizBemærkning"></span></p>
                     </div>
                     <div class="quiz__modal-knap">

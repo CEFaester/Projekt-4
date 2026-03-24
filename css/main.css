@@ -1,3 +1,4 @@
+
 /* =========================================
    BASE STYLES (Gælder altid - bygget til mobil)
    ========================================= */
@@ -13,6 +14,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+    background: #faf9f8;
+    line-height: 1.7;
 }
 
 footer {
@@ -516,19 +519,20 @@ details[open] .faq-section__icon {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 2.5rem 0 2.5rem 0;
+    margin: 3.5rem 0 3.5rem 0;
+    padding: 2rem 0;
 }
 .quiz__container {
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
-  padding: 2rem 1.5rem 2rem 1.5rem;
-  max-width: 420px;
+  border-radius: 24px;
+  box-shadow: 0 4px 24px 0 rgba(255,0,0,0.07);
+    padding: 3rem 2.5rem 3rem 2.5rem;
+  max-width: 600px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.2rem;
+    gap: 2.2rem;
 }
 .quiz__overskrift {
   color: #FF0000;
@@ -567,23 +571,26 @@ details[open] .faq-section__icon {
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
 }
 .quiz__status {
-  width: 80%;
-  height: 4rem;
+  width: 90%;
+  min-height: 4rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 1.2rem;
 }
 .quiz__status h2 {
   font-size: 1.2rem;
 }
 .quiz__spørgsmål {
-  width: 80%;
-  height: 8rem;
+  width: 90%;
+  min-height: 7rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 2px solid #bbb;
   border-radius: 25px;
+  background: #fff;
+  margin-bottom: 1.2rem;
 }
 .quiz__spørgsmål h3 {
   font-size: 1.1rem;
@@ -591,20 +598,24 @@ details[open] .faq-section__icon {
   padding: 3px;
 }
 .quiz__valg {
-  width: 80%;
-  height: 12rem;
+  width: 90%;
+  min-height: 13rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 1.5rem;
 }
 .quiz__valg span {
-  width: 45%;
-  height: 3rem;
+  width: 47%;
+  height: 3.2rem;
   border: 2px solid #bbb;
   border-radius: 20px;
   overflow: hidden;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  background: #fff;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.04);
 }
 .quiz__option {
   width: 100%;
@@ -618,16 +629,20 @@ details[open] .faq-section__icon {
   color: #161616;
 }
 .quiz__option:hover {
-  transform: scale(1.12);
-  color: #fff;
-  background: #FF0000;
+  transform: scale(1.08);
+  color: #FF0000;
+  background: #ffeaea;
+  border: 2px solid #FF0000;
 }
 .quiz__radio {
   position: relative;
   display: none;
 }
 .quiz__radio:checked + .quiz__option {
-  background: paleturquoise;
+  background: #FF0000;
+  color: #fff;
+  border: 2px solid #FF0000;
+  box-shadow: 0 2px 8px 0 rgba(255,0,0,0.10);
 }
 .quiz__næste {
   width: 50%;
@@ -636,19 +651,21 @@ details[open] .faq-section__icon {
   justify-content: center;
 }
 .quiz__næste button {
-  width: 8rem;
-  height: 2rem;
-  border-radius: 10px;
-  background: none;
-  color: #191919;
-  font-weight: 600;
-  border: 2px solid #888;
+  width: 10rem;
+  height: 2.3rem;
+  border-radius: 12px;
+  background: #fff;
+  color: #FF0000;
+  font-weight: 700;
+  border: 2px solid #FF0000;
   cursor: pointer;
   outline: none;
-  transition: background 0.2s;
+  font-size: 1.05rem;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.04);
 }
 .quiz__næste button:hover {
-  background-color: #e94f4f;
+  background: #FF0000;
   color: #fff;
 }
 .quiz__modal {
@@ -661,7 +678,7 @@ details[open] .faq-section__icon {
   height: 100vh;
   overflow: auto;
   background-color: rgba(0,0,0,0.4);
-  flex-direction: column;
+  display: flex;
   align-items: center;
   justify-content: center;
   animation: fadeIn 1.2s ease-in-out;
@@ -716,6 +733,14 @@ details[open] .faq-section__icon {
 .quiz__modal-knap button:hover {
   background-color: #555;
 }
+#quizBemærkning {
+  display: block;
+  color: #fff;
+  font-size: 1.15rem;
+  margin: 2.2rem 0 1.2rem 0;
+  text-align: center;
+  line-height: 1.6;
+}
 @media (max-width: 700px) {
   .quiz__container {
     max-width: 95vw;
@@ -740,7 +765,7 @@ details[open] .faq-section__icon {
    OM OS SIDE 
    ========================================= */
 .omos {
-    padding: 1.5rem 1rem;
+    padding: 2.5rem 1.5rem 2.5rem 1.5rem;
     font-family: "Nunito", sans-serif;
     max-width: 100vw;
 }
@@ -909,18 +934,27 @@ details[open] .faq-section__icon {
   gap: 0.5rem;
   margin: 1rem 0 0.5rem 0;
 }
+}
 .omos-roller__dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50% !important;
   background: #e0e0e0;
-  border: none;
+  border: black solid 1px;
   padding: 0;
   cursor: pointer;
   transition: background 0.2s;
+  display: inline-block;
 }
 .omos-roller__dot.active {
   background: #e94f4f;
+}
+
+/* Ingen dots på desktop, da det er en karousel lavet til mobil. */
+@media (min-width: 700px) {
+  .omos-roller__dots {
+    display: none !important;
+  }
 }
 
 /* OM OS Video */
