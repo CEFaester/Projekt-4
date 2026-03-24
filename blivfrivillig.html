@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+
+    <title>Bliv frivillig</title>
+
+    <script src="js/scrolltotop.js" defer></script>
+    <script src="js/burgermenu.js" defer></script>
+    <script src="js/form-success.js" defer></script>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/svg+xml" href="assets/sindfrivilliglogo.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">
+            <img src="assets/sindfrivilliglogo.svg" alt="SIND logo" class="navbar__logo">
+        </a>
+        <button class="navbar__burger" id="navbarBurger" aria-label="Åbn menu">
+            <span class="navbar__burger-line"></span>
+            <span class="navbar__burger-line"></span>
+            <span class="navbar__burger-line"></span>
+        </button>
+        <div class="navbar__menu" id="navbarMenu">
+            <a href="index.html" class="navbar__menu-link">Forside</a>
+            <a href="events.html" class="navbar__menu-link">Events</a>
+            <a href="om-os.html" class="navbar__menu-link">Om os</a>
+            <a href="faq.html" class="navbar__menu-link">FAQ</a>
+            <a href="kontakt.html" class="navbar__menu-link">Kontakt</a>
+            <a href="blivfrivillig.html" class="navbar__menu-link">Bliv frivillig</a>
+        </div>
+    </nav>
+
+    <main class="kontakt-side frivillig-side">
+        <div class="kontakt-side__container">
+            <h1>Bliv frivillig</h1>
+            <p class="kontakt-side__text">Vil du være en del af et trygt fællesskab og gøre en forskel for andre? Udfyld blanketten herunder, så kontakter vi dig om de muligheder, der passer bedst til dig.</p>
+
+            <div class="kontakt-side__layout">
+                <section class="kontakt-formular" aria-labelledby="frivilligFormTitel">
+                    <h2 id="frivilligFormTitel" class="kontakt-formular__titel">Tilmeldingsblanket</h2>
+                    <p class="kontakt-formular__intro">Fortæl os lidt om dig selv, dine interesser og hvordan du gerne vil bidrage som frivillig hos SIND.</p>
+
+                    <form class="kontakt-formular__form" action="#" method="post" data-success-message="Tak for din tilmelding. Vi kontakter dig snart om næste skridt.">
+                        <div class="kontakt-formular__felt">
+                            <label for="frivilligNavn">Fulde navn</label>
+                            <input id="frivilligNavn" name="navn" type="text" autocomplete="name" required>
+                        </div>
+
+                        <div class="kontakt-formular__felt kontakt-formular__felt--half">
+                            <label for="frivilligEmail">E-mail</label>
+                            <input id="frivilligEmail" name="email" type="email" autocomplete="email" required>
+                        </div>
+
+                        <div class="kontakt-formular__felt kontakt-formular__felt--half">
+                            <label for="frivilligTelefon">Telefon</label>
+                            <input id="frivilligTelefon" name="telefon" type="tel" autocomplete="tel" required>
+                        </div>
+
+                        <div class="kontakt-formular__felt kontakt-formular__felt--half">
+                            <label for="frivilligAlder">Alder</label>
+                            <input id="frivilligAlder" name="alder" type="number" min="15" max="99" inputmode="numeric" required>
+                        </div>
+
+                        <div class="kontakt-formular__felt kontakt-formular__felt--half">
+                            <label for="frivilligPostnummer">Postnummer</label>
+                            <input id="frivilligPostnummer" name="postnummer" type="text" inputmode="numeric" autocomplete="postal-code" required>
+                        </div>
+
+                        <div class="kontakt-formular__felt">
+                            <label for="frivilligOmraade">Hvilket område interesserer dig mest?</label>
+                            <select id="frivilligOmraade" name="omraade" required>
+                                <option value="">Vælg et område</option>
+                                <option value="events">Arrangementer og events</option>
+                                <option value="besogsven">Besøgsven</option>
+                                <option value="raadgivning">Telefonrådgivning</option>
+                                <option value="bestyrelse">Bestyrelsesarbejde</option>
+                                <option value="andet">Jeg er åben for flere muligheder</option>
+                            </select>
+                        </div>
+
+                        <div class="kontakt-formular__felt">
+                            <label for="frivilligTid">Hvornår har du typisk tid?</label>
+                            <select id="frivilligTid" name="tilgaengelighed" required>
+                                <option value="">Vælg din tilgængelighed</option>
+                                <option value="hverdage">Primært hverdage</option>
+                                <option value="aftener">Primært aftener</option>
+                                <option value="weekend">Primært weekender</option>
+                                <option value="fleksibel">Jeg er fleksibel</option>
+                            </select>
+                        </div>
+
+                        <div class="kontakt-formular__felt">
+                            <label for="frivilligErfaring">Har du erfaring med frivilligt arbejde?</label>
+                            <select id="frivilligErfaring" name="erfaring" required>
+                                <option value="">Vælg en mulighed</option>
+                                <option value="ja">Ja, jeg har erfaring</option>
+                                <option value="lidt">Lidt erfaring</option>
+                                <option value="nej">Nej, men jeg vil gerne i gang</option>
+                            </select>
+                        </div>
+
+                        <div class="kontakt-formular__felt">
+                            <label for="frivilligMotivation">Hvorfor vil du gerne være frivillig hos SIND?</label>
+                            <textarea id="frivilligMotivation" name="motivation" rows="6" required></textarea>
+                        </div>
+
+                        <div class="kontakt-formular__samtykke">
+                            <input id="frivilligSamtykke" name="samtykke" type="checkbox" required>
+                            <label for="frivilligSamtykke">Jeg accepterer, at SIND må kontakte mig om min tilmelding og relevante frivilligmuligheder.</label>
+                        </div>
+
+                        <button class="kontakt-formular__knap" type="submit">Send tilmelding</button>
+                    </form>
+                </section>
+
+                <aside class="kontakt-side__kort" aria-label="Info om frivilligtilmelding">
+                    <h2 class="kontakt-side__kort-titel">Sådan foregår det</h2>
+                    <p>Det skal være trygt og overskueligt at starte som frivillig. Når du sender blanketten, tager vi dig videre trin for trin.</p>
+
+                    <div class="kontakt-side__kort-blok">
+                        <h6>1. Vi kontakter dig</h6>
+                        <p>Du hører fra os, så vi kan lære dig bedre at kende og tale om dine interesser.</p>
+                    </div>
+
+                    <div class="kontakt-side__kort-blok">
+                        <h6>2. Vi finder det rette match</h6>
+                        <p>Sammen finder vi en frivilligrolle, som passer til din tid, dine ønsker og dine styrker.</p>
+                    </div>
+
+                    <div class="kontakt-side__kort-blok">
+                        <h6>3. Du kommer godt i gang</h6>
+                        <p>Du bliver introduceret til fællesskabet og får støtte i opstarten, så du ikke står alene.</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <section id="banner__blivFrivillig">
+        <div class="footer__top">Er du klar til at blive en del af fællesskabet?</div>
+        <div class="footer__sub">SIND har allerede 500+ frivillige, men vi vil gerne have dig med på holdet!</div>
+        <div class="footer__action">
+            <div class="footer__action-text">Klik her og send din ansøgning i dag!</div>
+            <a href="blivfrivillig.html" class="footer__action-btn">Bliv frivillig</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__help">
+            <h5 class="footer__help-title">Brug for hjælp?</h5>
+            <div class="footer__contact">
+                <strong>Kontakt os her!</strong><br>
+                SIND - Landsforeningen for psykisk sundhed<br>
+                Blekinge Boulevard 2<br>
+                2630 Taastrup<br><br>
+                Tlf: 35 24 07 50<br>
+                Mail: <a href="mailto:landsforeningen@sind.dk" class="footer__contact-mail">landsforeningen@sind.dk</a>
+            </div>
+            <button id="scrollToTopBtn" class="footer__scroll-top-btn" aria-label="Scroll til toppen">
+                <img src="assets/arrow-up.svg" alt="Op">
+            </button>
+            <div class="footer__icons">
+                <a href="#" class="footer__icon-link"><img src="assets/facebook.svg" alt="Facebook" class="footer__icon-img"></a>
+                <a href="#" class="footer__icon-link"><img src="assets/linkedin.svg" alt="LinkedIn" class="footer__icon-img"></a>
+                <a href="#" class="footer__icon-link"><img src="assets/instagram.svg" alt="Instagram" class="footer__icon-img"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

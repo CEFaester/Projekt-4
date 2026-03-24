@@ -6,7 +6,7 @@ const menuItems = [
     { menuName: 'Om os', link: 'om-os.html' },
     { menuName: 'FAQ', link: 'faq.html' },
     { menuName: 'Kontakt', link: 'kontakt.html' },
-    { menuName: 'Bliv frivillig', link: '#' }
+    { menuName: 'Bliv frivillig', link: 'blivfrivillig.html' }
 ];
 
 const navbarMenu = document.getElementById('navbarMenu');

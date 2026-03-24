@@ -517,7 +517,8 @@ footer {
     background-color: #007F24;
     color: #fff;
     border: none;
-    /* Kopier evt. styling fra dine andre knapper her */
+  display: inline-block;
+  text-decoration: none;
 }
 
 /* =========================================
@@ -1339,6 +1340,9 @@ details[open] .faq-section__icon {
     width: 100%;
     max-width: 320px;
     font-family: "Nunito", sans-serif;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
 }
 .omos-video__cta:hover {
     background: #145c32;
@@ -1733,6 +1737,8 @@ details[open] .faq-section__icon {
   margin-left: auto;
   margin-right: auto;
   font-family: "Nunito", sans-serif;
+  display: inline-block;
+  text-decoration: none;
 }
 .footer__help {
   background: transparent;
