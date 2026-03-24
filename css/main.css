@@ -8,7 +8,7 @@ html, body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  background-color: #f4faf7;
+  background-color: #FFFCFA;
  
 }
 
@@ -28,7 +28,7 @@ footer {
    ========================================= */
 .navbar {
   position: relative;
-  background: #fff;
+  background: #FFFCFA;
   color: #333;
   display: flex;
   align-items: center;
@@ -88,7 +88,7 @@ footer {
   top: 100%;
   left: 0;
   right: 0;
-  background: #fff;
+  background: #FFFCFA;
   flex-direction: column;
   gap: 0.7rem;
   padding: 1.2rem 0.7rem;
@@ -858,7 +858,7 @@ details[open] .faq-section__icon {
 
 /* OM OS Roller */
 .omos-roller {
-    background: #fff;
+    background: #fffcfa;
     padding: 2.5rem 1rem 2.5rem 1rem;
 }
 .omos-roller__container {
@@ -889,6 +889,7 @@ details[open] .faq-section__icon {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #FFFCFA;
 }
 .omos-roller__karousel {
     width: 100%;
@@ -1054,23 +1055,23 @@ details[open] .faq-section__icon {
 
 /* OM OS Hero */
 .omos-hero {
-    width: 100%;
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
     background: none;
     padding: 0;
 }
 .omos-hero__container {
-    position: relative;
-    width: 100%;
-    min-height: 220px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-end;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 360px;
+  overflow: hidden;
 }
 .omos-hero__billede {
     width: 100%;
-    height: 200px;
+  height: 100%;
     object-fit: cover;
     display: block;
 }
@@ -1079,16 +1080,20 @@ details[open] .faq-section__icon {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 1.2rem 1rem 1.2rem 1rem;
-    background: rgba(179, 179, 179, 0.6);
+  min-height: 160px;
+  padding: 24px 16px;
+  background: rgba(179, 179, 179, 0.5);
     color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
     text-align: left;
 }
 .omos-hero__overskrift {
     font-weight: 700;
-    font-size: 2.25rem;
-    margin-bottom: 0.3rem;
-    line-height: 1.1;
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+  line-height: 1.1;
     color: #fff;
     text-align: left;
 }
@@ -1098,7 +1103,7 @@ details[open] .faq-section__icon {
 }
 .omos-hero__undertitel {
     font-weight: 400;
-    font-size: 1rem;
+  font-size: 0.95rem;
     color: #fff;
     margin: 0;
     text-align: left;
@@ -1410,20 +1415,22 @@ details[open] .faq-section__icon {
     gap: 1rem;
   }
   
-  .omos-hero__billede {
-    height: 300px;
-  }
-  
   .omos-hero__overlay {
-    padding: 2rem 2.5rem 2rem 2.5rem;
+    min-height: 180px;
+    padding: 28px 40px;
   }
   
+  .omos-hero__container {
+    height: 70vh;
+    min-height: 420px;
+  }
+
   .omos-hero__overskrift {
-    font-size: 2.25rem;
+    font-size: 1.9rem;
   }
   
   .omos-hero__undertitel {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
   
   .omos-indhold {
@@ -1576,12 +1583,8 @@ details[open] .faq-section__icon {
     display: none; 
   }
   
-  .omos-hero__billede {
-    height: 380px;
-  }
-  
   .omos-hero__overlay {
-    padding: 2.5rem 4rem 2.5rem 4rem;
+    padding: 28px 40px;
   }
 
   .footer__icons {
