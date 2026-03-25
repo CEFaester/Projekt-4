@@ -214,7 +214,7 @@ footer {
   display: flex;
   flex-direction: column;
   width: 294px; 
-  align-self: center; 
+  align-self: flex-start; 
   gap: 10px;
 }
 
@@ -531,6 +531,7 @@ footer {
 
 .forside-bund__knap {
   margin-top: auto;
+  align-self: center;
   width: auto;
   padding: 0.7rem 1.5rem;
   background-color: #007F24;
@@ -1785,7 +1786,7 @@ details[open] .faq-section__icon {
   margin-bottom: 0.3rem;
 }
 .footer__action-btn {
-  background: #198754;
+  background: #007F24;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -1959,7 +1960,7 @@ details[open] .faq-section__icon {
   .hero-slider .hero-buttons {
     flex-direction: row;
     gap: 14px;
-    align-self: left;
+    align-self: flex-start;
   }
 
   .hero-slider .btn-primary,
