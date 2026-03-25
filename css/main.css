@@ -1339,6 +1339,13 @@ details[open] .faq-section__icon {
     justify-content: center;
     align-items: center;
 }
+.omos-video__iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 0;
+  border-radius: 12px;
+  display: block;
+}
 .omos-video__placeholder {
     width: 100%;
     aspect-ratio: 16/9;
