@@ -2118,32 +2118,56 @@ details[open] .faq-section__icon {
       height: 100px; 
   }
 
+  /* =========================================
+     FORSIDE - ANMELDELSER (DESKTOP)
+     ========================================= */
   .forside-anmeldelser {
-      max-width: 1200px;
-      padding: 3rem 1rem;
+      max-width: 1000px;
+      padding: 3rem 50px; /* Giver god plads ude i siderne til pilene */
   }
+
+  /* Vi genopliver karrusellen! Ingen grid her. */
   .forside-anmeldelser__karousel {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      overflow: visible;
-      padding: 2rem 0 0;
-      scroll-snap-type: none;
+      display: flex; 
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 2rem;
+      padding: 2rem 0;
+      scrollbar-width: none; /* Skjuler scrollbar på desktop */
+  }
+  .forside-anmeldelser__karousel::-webkit-scrollbar {
+      display: none;
   }
   
+  /* Kortet bliver bredt og lægger tingene side om side */
   .forside-anmeldelser__kort {
-      width: auto;
-      max-width: 100%;
-      min-height: 320px;
-      margin: 0;
+      flex: 0 0 80%; /* Kortet fylder 80% af karrusellens bredde */
+      max-width: 800px;
+      flex-direction: row; /* NYT: Billede til venstre, tekst til højre! */
+      align-items: center; /* Centrerer det lodret */
+      min-height: 250px;
+      margin: 0 auto;
+      padding: 2.5rem 3rem;
+      text-align: left; /* Teksten skal være venstrestillet på desktop */
   }
   
-    .forside-anmeldelser__portraet {
-      width: 88px;
-      height: 88px;
+  /* Billedet (portrættet) til venstre */
+  .forside-anmeldelser__portraet-wrap {
+      width: 140px; 
+      height: 140px;
+      margin-right: 2.5rem; /* Skaber luft over til teksten */
+      margin-bottom: 0; /* Fjerner margin fra mobilen */
   }
   
+  .forside-anmeldelser__portraet {
+      width: 100%;
+      height: 100%;
+  }
+  
+  /* Teksten til højre */
   .forside-anmeldelser__indhold {
+      align-items: flex-start; /* Rykker teksten ud til venstre kant */
       justify-content: center;
   }
   
@@ -2153,9 +2177,43 @@ details[open] .faq-section__icon {
   .forside-anmeldelser__tekst {
       font-size: 1.1rem;
   }
-    .forside-anmeldelser__dots {
-      display: none;
-    }
+  
+  .forside-anmeldelser__dots {
+      display: none; /* Vi bruger pile på desktop, ikke dots */
+  }
+
+  /* Pile styling (Vises kun på desktop) */
+  .forside-anmeldelser__pil {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      background-color: #fff;
+      border: 2px solid #cc0000;
+      color: #cc0000;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.3s, color 0.3s;
+  }
+  
+  .forside-anmeldelser__pil:hover {
+      background-color: #cc0000;
+      color: #fff;
+  }
+  
+  .forside-anmeldelser__pil--venstre {
+      left: 0;
+  }
+  
+  .forside-anmeldelser__pil--højre {
+      right: 0;
+  }
 
   .omos {
     max-width: 1200px;
