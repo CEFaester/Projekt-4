@@ -58,8 +58,8 @@ const eventsData = [
         region: "midtjylland", 
         date: "01/03 - 2026", 
         description: "Vores introaften er en afslappet måde at lære SIND at kende på. <br><br> Her møder du både frivillige og ansatte, som fortæller om: <br><br> • hvad man laver som frivillig <br> • hvilke roller man kan have <br> • hvordan man kommer i gang <br><br> Der er også tid til spørgsmål, snak og kaffe.",
-        image: "img/sind__events__introAften.webp", // Stien til dit billede
-        icon: "assets/arrow-right.svg"  // Stien til dit ikon
+        image: "img/sind__events__introAften.webp",
+        icon: "assets/arrow-right.svg"
     }
 ];
 
@@ -73,12 +73,11 @@ const dynamicTitle = document.getElementById('dynamic-filter-title');
 function showAllEvents() {
     cardsContainer.innerHTML = '';
     
-    // Valgfrit: En lille overskrift for at vise, at vi ser hele landet
+    
     dynamicTitle.innerText = "Alle events i Danmark";
-    dynamicTitle.style.display = "block"; // Sørg for at den er synlig
+    dynamicTitle.style.display = "block";
 
     eventsData.forEach(event => {
-        // Bemærk: Vi sender nu 'true' med, fordi vi VIL se regionerne på kortene her
         const cardHTML = generateCardHTML(event, true);
         cardsContainer.insertAdjacentHTML('beforeend', cardHTML);
     });
@@ -92,13 +91,11 @@ function filterEventsByRegion(regionId) {
     const displayName = regionNames[regionId]; 
     
     if (filteredEvents.length === 0) {
-        // Skjul overskriften, hvis der ingen events er (valgfrit)
         dynamicTitle.style.display = "none";
         cardsContainer.innerHTML = `<p class="map-section__empty-message">Der er ingen events i ${displayName} lige nu.</p>`;
     } else {
-        // NYT: Opdater teksten i den faste overskrift
         dynamicTitle.innerText = `Events i ${displayName}`;
-        dynamicTitle.style.display = "block"; // Sørg for at den er synlig
+        dynamicTitle.style.display = "block";
 
         filteredEvents.forEach(event => {
             const cardHTML = generateCardHTML(event, false);
@@ -108,17 +105,13 @@ function filterEventsByRegion(regionId) {
 }
 
 // 6. Funktion til at generere HTML for et enkelt kort
-// NYT: showLabel parameteren modtager true eller false
 function generateCardHTML(event, showLabel) {
     const displayName = regionNames[event.region];
 
-    // NYT: Vi bygger billedet først.
     const imageHTML = `<img src="${event.image}" alt="${event.title}" class="event-card__image">`;
 
-    // NYT: Mærkatet (label) skal have en specifik klasse for placering.
     const labelHTML = showLabel ? `<span class="event-card__label event-card__label--on-image">${displayName}</span>` : '';
 
-    // Vi bygger kortet med den præcise rækkefølge
     return `
         <div class="event-card">
             ${imageHTML}
@@ -140,7 +133,6 @@ regions.forEach(region => {
         regions.forEach(r => r.classList.remove('map-section__region--active'));
         this.classList.add('map-section__region--active');
         
-        // Får fat i dit nye, sikre ID (f.eks. "sjaelland")
         const selectedRegion = this.getAttribute('id');
         filterEventsByRegion(selectedRegion);
     });
