@@ -39,10 +39,11 @@
 
         </nav>
 
-            <main class="kontakt-side">
+            <header class="kontakt-side">
             <div class="kontakt-side__container">
             <h1>Om os</h1>
             </div>
+            </header>
 
         <main class="omos">
              <!-- Hero sektion -->  
@@ -50,10 +51,11 @@
                 <div class="omos-hero__container">
                     <img src="assets/sindfrivilligbannerfoto.webp" alt="Billede af en ung frivillig" class="omos-hero__billede">
                     <div class="omos-hero__overlay">
-                        <h1 class="omos-hero__overskrift omos-hero__overskrift--rød">Om SIND frivillige</h1>
+                            <h2 class="omos-hero__overskrift omos-hero__overskrift--rød">Om SIND frivillige</h2>
                         <p class="omos-hero__undertitel">Hos SIND handler frivillighed om fællesskab, nærvær og modet til at være der for hinanden.</p>
                     </div>
                 </div>
+                </section>
  
             <!-- En dag hos SIND frivillig -->
             <section class="omos-video">
@@ -75,7 +77,7 @@
             </section>
 
             <!-- Roller (karousel) -->
-             <section class="omos-roller">
+            <section class="omos-roller">
                 <div class="omos-roller__container">
                     <h2 class="omos-roller__overskrift">Hvilken rolle passer til dig?</h2>
                     <p class="omos-roller__intro">Uanset om du er til samtaler, aktiviteter eller praktiske opgaver - <br>her kan du se, hvad du kan bidrage med.</p>
@@ -130,53 +132,48 @@
                             </div>
                         </div>
                     </div>
-
-                  
-                </div>
-                  <div class="omos-roller__dots" id="rollerDots"></div>
                     </div>
+                    <div class="omos-roller__dots" id="rollerDots"></div>
                 </div>
             </section>
-                               </section>
 
    <!-- Quiz sektion -->
-  <section class="quiz" id="quiz">
+    <section class="quiz" id="quiz">
         <div class="quiz__container">
             <h2 class="quiz__overskrift">I tvivl om hvilken frivilligrolle passer til dig?</h2>
             <p class="quiz__intro">Hvis du er i tvivl om, hvilken rolle frivillig, du kan have, så tag quizzen herunder!</p>
             <div>
                 <button class="quiz__cta cta-knap" id="quizStartKnap">Tag quizzen her</button>
             </div>
-            <!-- Quiz-indhold og modals (skjult som default) -->
-                <div id="quizIntro">
-                    <p>Velkommen til quizzen! Tryk på knappen for at komme i gang og find ud af, hvilken frivilligrolle der passer til dig.</p>
-                </div>
+            <div id="quizIntro">
+                <p>Velkommen til quizzen! Tryk på knappen for at komme i gang og find ud af, hvilken frivilligrolle der passer til dig.</p>
+            </div>
             <div class="quiz__spil" id="quizSpil" style="display:none;">
                 <div class="quiz__status">
                     <h2>Spørgsmål: <span id="quizNr"></span></h2>
                 </div>
                 <div class="quiz__spørgsmål">
-                    <h3 id="quizSpørgsmålTekst"></h3>
+                    <h3 id="quizSpørgsmålTekst">Spørgsmål kommer her</h3>
                 </div>
                 <div class="quiz__valg">
                     <span>
-                        <input type="radio" id="quizValg1" name="quizValg" class="quiz__radio" value="A" />
+                        <input type="radio" id="quizValg1" name="quizValg" class="quiz__radio" value="A">
                         <label for="quizValg1" class="quiz__option" id="quizValg1Label"></label>
                     </span>
                     <span>
-                        <input type="radio" id="quizValg2" name="quizValg" class="quiz__radio" value="B" />
+                        <input type="radio" id="quizValg2" name="quizValg" class="quiz__radio" value="B">
                         <label for="quizValg2" class="quiz__option" id="quizValg2Label"></label>
                     </span>
                     <span>
-                        <input type="radio" id="quizValg3" name="quizValg" class="quiz__radio" value="C" />
+                        <input type="radio" id="quizValg3" name="quizValg" class="quiz__radio" value="C">
                         <label for="quizValg3" class="quiz__option" id="quizValg3Label"></label>
                     </span>
                     <span>
-                        <input type="radio" id="quizValg4" name="quizValg" class="quiz__radio" value="D" />
+                        <input type="radio" id="quizValg4" name="quizValg" class="quiz__radio" value="D">
                         <label for="quizValg4" class="quiz__option" id="quizValg4Label"></label>
                     </span>
                     <span>
-                        <input type="radio" id="quizValg5" name="quizValg" class="quiz__radio" value="E" />
+                        <input type="radio" id="quizValg5" name="quizValg" class="quiz__radio" value="E">
                         <label for="quizValg5" class="quiz__option" id="quizValg5Label"></label>
                     </span>
                     <div class="quiz__næste">
@@ -184,7 +181,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Modal til slutresultat -->
             <div class="quiz__modal quiz__modal--score" id="quizScoreModal" style="display:none;">
                 <div class="quiz__modal-indhold">
                     <h2>Tillykke, quiz gennemført!</h2>
@@ -196,7 +192,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Modal til valg-advarsel -->
             <div class="quiz__modal quiz__modal--valg" id="quizValgModal" style="display:none;">
                 <div class="quiz__modal-indhold">
                     <h2>Vælg et svar</h2>
@@ -208,8 +203,9 @@
         </div>
     </section>
         </main>
-        <section id="banner__blivFrivillig">
-            <div class="footer__top">Er du klar til at blive en del af fællesskabet?</div>
+
+        <section id="banner__blivFrivillig" aria-labelledby="banner-blivfrivillig-heading">
+            <h2 id="banner-blivfrivillig-heading" class="footer__top">Er du klar til at blive en del af fællesskabet?</h2>
             <div class="footer__sub">SIND har allerede 500+ frivillige, men vi vil gerne have dig med på holdet!</div>
             <div class="footer__action">
                 <div class="footer__action-text">Klik her og send din ansøgning i dag!</div>
@@ -219,9 +215,9 @@
 
         <footer class="footer">
             <div class="footer__help">
-                <h5 class="footer__help-title">Brug for hjælp?</h5>
+                <h2 class="footer__help-title">Brug for hjælp?</h2>
                 <div class="footer__contact">
-                    <strong>Kontakt os her!</strong><br>
+                    <h3>Kontakt os her!</h3>
                     SIND - Landsforeningen for psykisk sundhed<br>
                     Blekinge Boulevard 2<br>
                     2630 Taastrup<br>
@@ -238,6 +234,6 @@
                     <a href="#" class="footer__icon-link"><img src="assets/instagram.svg" alt="Instagram" class="footer__icon-img"></a>
                 </div>
             </div>
-        </footer>  
+        </footer>
     </body>
 </html>
