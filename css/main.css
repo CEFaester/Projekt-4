@@ -382,6 +382,10 @@ footer {
 /* =========================================
    FORSIDE - ANMELDELSER
    ========================================= */
+.forside-anmeldelser__pil {
+  display: none;
+}
+
 .forside-anmeldelser {
   position: relative;
   padding: 2.5rem 1rem;
