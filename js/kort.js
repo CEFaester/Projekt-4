@@ -18,8 +18,8 @@ const eventsData = [
         region: "hovedstaden", 
         date: "01/03 - 2026", 
         description: "Vores introaften er en afslappet måde at lære SIND at kende på. <br><br> Her møder du både frivillige og ansatte, som fortæller om: <br><br> • hvad man laver som frivillig <br> • hvilke roller man kan have <br> • hvordan man kommer i gang <br><br> Der er også tid til spørgsmål, snak og kaffe.",
-        image: "img/sind__events__introAften.webp", // Stien til dit billede
-        icon: "assets/arrow-right.svg"  // Stien til dit ikon
+        image: "img/sind__events__introAften.webp",
+        icon: "assets/arrow-right.svg"
     },
     { 
         title: "Åben Café", 
