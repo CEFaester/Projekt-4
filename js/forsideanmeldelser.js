@@ -1,48 +1,21 @@
-const anmeldelserKarousel = document.getElementById('forsideAnmeldelserKarousel');
-const anmeldelserDots = document.getElementById('forsideAnmeldelserDots');
+// Kode til andmeldelse kort
+const reviewCarousel = document.getElementById('forsideAnmeldelserKarousel');
+const leftArrow = document.querySelector('.forside-anmeldelser__pil--venstre');
+const rightArrow = document.querySelector('.forside-anmeldelser__pil--højre');
 
-if (anmeldelserKarousel && anmeldelserDots) {
-  const anmeldelsesKort = anmeldelserKarousel.querySelectorAll('.forside-anmeldelser__kort');
-  let aktivtKort = 0;
-
-  function tegnDots() {
-    anmeldelserDots.innerHTML = '';
-
-    anmeldelsesKort.forEach((_, index) => {
-      const dot = document.createElement('button');
-      dot.className = 'forside-anmeldelser__dot' + (index === aktivtKort ? ' active' : '');
-      dot.type = 'button';
-      dot.setAttribute('aria-label', `Gå til anmeldelse ${index + 1}`);
-      dot.addEventListener('click', () => scrollTilKort(index));
-      anmeldelserDots.appendChild(dot);
-    });
-  }
-
-  function scrollTilKort(index) {
-    anmeldelsesKort[index].scrollIntoView({ behavior: 'smooth', inline: 'center' });
-    aktivtKort = index;
-    tegnDots();
-  }
-
-  anmeldelserKarousel.addEventListener('scroll', () => {
-    let mindsteAfstand = Infinity;
-    let naermesteKort = 0;
-
-    anmeldelsesKort.forEach((kort, index) => {
-      const rektangel = kort.getBoundingClientRect();
-      const afstand = Math.abs(rektangel.left + rektangel.width / 2 - window.innerWidth / 2);
-
-      if (afstand < mindsteAfstand) {
-        mindsteAfstand = afstand;
-        naermesteKort = index;
-      }
+// Tjekker om de findes på siden (så vi ikke får fejl på andre sider)
+if (reviewCarousel && leftArrow && rightArrow) {
+    
+    // Klik på venstre pil
+    leftArrow.addEventListener('click', () => {
+        const cardWidth = reviewCarousel.querySelector('.forside-anmeldelser__kort').offsetWidth;
+        // Tilføj gap (f.eks. 32px) til scroll-afstanden så den scroller et helt kort af gangen
+        reviewCarousel.scrollBy({ left: -(cardWidth + 32), behavior: 'smooth' });
     });
 
-    if (aktivtKort !== naermesteKort) {
-      aktivtKort = naermesteKort;
-      tegnDots();
-    }
-  });
-
-  tegnDots();
+    // Klik på højre pil
+    rightArrow.addEventListener('click', () => {
+        const cardWidth = reviewCarousel.querySelector('.forside-anmeldelser__kort').offsetWidth;
+        reviewCarousel.scrollBy({ left: (cardWidth + 32), behavior: 'smooth' });
+    });
 }

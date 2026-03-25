@@ -2118,46 +2118,46 @@ details[open] .faq-section__icon {
       height: 100px; 
   }
 
-  /* =========================================
+/* =========================================
      FORSIDE - ANMELDELSER (DESKTOP)
      ========================================= */
   .forside-anmeldelser {
-      max-width: 1000px;
-      padding: 3rem 50px; /* Giver god plads ude i siderne til pilene */
+      max-width: 900px; /* Nu flugter den præcis med resten af dit layout! */
+      margin: 0 auto;
+      padding: 3rem 3rem; /* Giver plads til pilene indeni kassen */
+      position: relative;
   }
 
-  /* Vi genopliver karrusellen! Ingen grid her. */
   .forside-anmeldelser__karousel {
       display: flex; 
       flex-wrap: nowrap;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       gap: 2rem;
-      padding: 2rem 0;
-      scrollbar-width: none; /* Skjuler scrollbar på desktop */
+      padding: 1rem 0 2rem 0; /* Luft i bunden til prikkerne */
+      scrollbar-width: none; 
   }
+  
   .forside-anmeldelser__karousel::-webkit-scrollbar {
       display: none;
   }
   
-  /* Kortet bliver bredt og lægger tingene side om side */
   .forside-anmeldelser__kort {
-      flex: 0 0 80%; /* Kortet fylder 80% af karrusellens bredde */
-      max-width: 800px;
-      flex-direction: row; /* NYT: Billede til venstre, tekst til højre! */
-      align-items: center; /* Centrerer det lodret */
+      flex: 0 0 100%; /* Sørger for at kortet holder sig indenfor de 900px */
+      flex-direction: row; /* Billede til venstre, tekst til højre */
+      align-items: center;
+      max-width: 100%; 
       min-height: 250px;
-      margin: 0 auto;
+      margin: 0;
       padding: 2.5rem 3rem;
-      text-align: left; /* Teksten skal være venstrestillet på desktop */
+      text-align: left; 
   }
   
-  /* Billedet (portrættet) til venstre */
   .forside-anmeldelser__portraet-wrap {
       width: 140px; 
       height: 140px;
-      margin-right: 2.5rem; /* Skaber luft over til teksten */
-      margin-bottom: 0; /* Fjerner margin fra mobilen */
+      margin-right: 2.5rem; 
+      margin-bottom: 0; 
   }
   
   .forside-anmeldelser__portraet {
@@ -2165,24 +2165,25 @@ details[open] .faq-section__icon {
       height: 100%;
   }
   
-  /* Teksten til højre */
   .forside-anmeldelser__indhold {
-      align-items: flex-start; /* Rykker teksten ud til venstre kant */
+      align-items: flex-start; 
       justify-content: center;
   }
   
   .forside-anmeldelser__navn {
       font-size: 1.6rem;
   }
+  
   .forside-anmeldelser__tekst {
       font-size: 1.1rem;
   }
   
+  /* Sørger for at prikkerne også vises på desktop */
   .forside-anmeldelser__dots {
-      display: none; /* Vi bruger pile på desktop, ikke dots */
+      display: flex !important; 
   }
 
-  /* Pile styling (Vises kun på desktop) */
+  /* Pile styling */
   .forside-anmeldelser__pil {
       display: flex;
       align-items: center;
@@ -2208,11 +2209,11 @@ details[open] .faq-section__icon {
   }
   
   .forside-anmeldelser__pil--venstre {
-      left: 0;
+      left: 0; /* Placerer pilen helt ud til venstre */
   }
   
   .forside-anmeldelser__pil--højre {
-      right: 0;
+      right: 0; /* Placerer pilen helt ud til højre */
   }
 
   .omos {
