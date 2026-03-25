@@ -1953,9 +1953,18 @@ details[open] .faq-section__icon {
     padding-bottom: 12px;
   }
 
-  .kontakt-side__layout {
-    grid-template-columns: minmax(0, 1.6fr) minmax(18rem, 1fr);
+  .frivillig-side .kontakt-side__layout {
+    grid-template-columns: minmax(18rem, 1fr) minmax(0, 1.6fr);
+    grid-template-areas: "info form";
     align-items: start;
+  }
+
+  .frivillig-side .kontakt-side__kort {
+    grid-area: info;
+  }
+
+  .frivillig-side .kontakt-formular {
+    grid-area: form;
   }
 
   .kontakt-formular__form {
