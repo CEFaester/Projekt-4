@@ -214,7 +214,7 @@ footer {
   display: flex;
   flex-direction: column;
   width: 294px; 
-  align-self: flex-start; 
+  align-self: center; 
   gap: 10px;
 }
 
