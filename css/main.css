@@ -2123,7 +2123,6 @@ details[open] .faq-section__icon {
   /* Nede i din Desktop Media Query */
   .forside-banner__ikon {
       max-width: 100px;
-      /* NYT: Tvinger også desktop-højden, så linjen holder */
       height: 100px; 
   }
 
@@ -2166,23 +2165,20 @@ details[open] .faq-section__icon {
       display: none;
     }
 
-/* 1. Den overordnede container til Om Os */
   .omos {
-    max-width: 1200px; /* NYT: Øget fra 900px (eller slet for 100% bredde) */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 3rem 0;
   }
   
-  /* 2. Containeren til 'Vores Roller' kortene */
   .omos-roller__container {
-    max-width: 1200px; /* NYT: Manglende før i desktop, sørger for kortene kan sprede sig */
+    max-width: 1200px;
   }
 
-  /* 3. Containeren til brødteksten */
   .omos-indhold {
     padding: 4rem 0 3rem 0;
-    max-width: 1000px; /* NYT: Øget fra 800px, giver teksten mere plads uden at blive ulæselig */
-    margin: 0 auto; /* NYT: Sørger for at teksten bliver på midten af den nye brede side */
+    max-width: 1000px;
+    margin: 0 auto;
   }
   
   .omos__top {
@@ -2202,7 +2198,7 @@ details[open] .faq-section__icon {
   }
 
   .omos__billede {
-    max-width: 100%; /* Lader billedet fylde den 1200px brede omos-container helt ud */
+    max-width: 100%;
     min-height: 400px; 
   }
 
@@ -2210,41 +2206,36 @@ details[open] .faq-section__icon {
     background-color: #FFFCFA;
   }
 
-  /* Slip video-containeren fri */
   .omos-video__container {
-    max-width: 1000px; /* Øget fra 500px */
+    max-width: 1000px;
   }
 
-  /* Giv intro-teksten lov til at brede sig lidt mere */
+
   .omos-roller__intro {
-    max-width: 800px; /* Øget fra 500px */
-    margin-bottom: 2rem; /* Lidt ekstra luft ned til karrusellen på stor skærm */
+    max-width: 800px;
+    margin-bottom: 2rem;
   }
 
-  /* 1. Vi fjerner flexbox fra karrusellen på desktop, så den bare er en almindelig kasse */
   .omos-roller__karousel {
     display: block; 
     overflow: visible;
-    padding: 2rem 0; /* Giver luften i top og bund, så skyggerne ikke klippes */
+    padding: 2rem 0;
   }
 
-  /* 2. NYT: Vi gør SELVE LISTEN til vores Grid! Det løser hele overlap-problemet */
   .omos-roller__kortliste {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px; /* God plads mellem alle kort, både lodret og vandret */
+    gap: 40px;
     width: 100%;
   }
 
-  /* 3. Vi lader kortene tilpasse sig griddet uden at tvinge en højde */
   .omos-roller__kort {
-    max-width: 100%; /* Lader griddet styre bredden fuldstændig */
+    max-width: 100%;
     margin: 0; 
-    height: auto; /* NYT: Dette forhindrer dem i at vokse ud over deres egen bund */
+    height: auto;
     min-height: 420px; 
   }
 
-  /* 4. Skjul prikkerne helt på desktop */
   .omos-roller__dots {
     display: none; 
   }
