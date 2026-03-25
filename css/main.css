@@ -1518,7 +1518,7 @@ details[open] .faq-section__icon {
 .kontakt-side__kort {
   background: #F8FCFA;
   border: 1px solid #cc0000;
-  border-radius: 16px;
+  border-radius: 6px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.06);
   padding: 1.5rem;
   box-sizing: border-box;
