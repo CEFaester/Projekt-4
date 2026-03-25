@@ -1,5 +1,5 @@
 // Lærke: Billedecarousel JS - håndterer karousellen på index.html
-// Lavet i samarbejde med AI (Gemini) - rettet og tilpasset af Lærke
+// Lavet i samarbejde med AI (Copilot) - rettet og tilpasset af Lærke
 // SE AI PROMPT DOKUMENT FOR MERE INFO OM KODEN
 
 document.addEventListener("DOMContentLoaded", () => {
