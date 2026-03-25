@@ -256,9 +256,6 @@ footer {
   border: 2px solid #E63946;
 }
 
-.hero-slider .hero-buttons {
-  align-self: center;
-}
 
 .hero-slider .slider-dots {
   position: absolute;
@@ -1926,6 +1923,7 @@ details[open] .faq-section__icon {
   .hero-slider .hero-buttons {
     flex-direction: row;
     gap: 14px;
+    align-self: left;
   }
 
   .hero-slider .btn-primary,
@@ -1942,10 +1940,6 @@ details[open] .faq-section__icon {
   .hero-slider .btn-secondary {
     width: 300px;
   }
-
-  .hero-slider .hero-buttons {
-  align-self: left;
-}
 
   .hero-slider .arrow {
     display: block;
