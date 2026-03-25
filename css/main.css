@@ -1544,7 +1544,7 @@ details[open] .faq-section__icon {
   max-width: 42rem;
   color: var(--color-text);
   margin: 0 auto 2rem auto;
-  text-align: center;
+  text-align: left;
 }
 
 .kontakt-side__layout {
@@ -1724,10 +1724,10 @@ details[open] .faq-section__icon {
 @media (max-width: 599px) {
   .kontakt-formular,
   .kontakt-side__kort {
-    width: auto;
+    width: 100%;
     max-width: none;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .kontakt-formular,
