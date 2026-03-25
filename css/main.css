@@ -1352,6 +1352,13 @@ details[open] .faq-section__icon {
     font-size: 1rem;
     font-weight: 400;
 }
+.omos-video__afspiller {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  display: block;
+  background: #000;
+}
 .omos-video__cta {
     font-weight: 700;
     font-size: 0.8125rem;
