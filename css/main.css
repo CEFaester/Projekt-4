@@ -813,20 +813,20 @@ details[open] .faq-section__icon {
   width: 100%;
   display: flex;
   justify-content: center;
-    margin: 3.5rem 0 3.5rem 0;
-    padding: 2rem 0;
+  margin: 3.5rem 0 3.5rem 0;
+  padding: 2rem 0;
 }
 .quiz__container {
   background: #fff;
   border-radius: 24px;
   box-shadow: 0 4px 24px 0 rgba(204,0,0,0.07);
-    padding: 3rem 2.5rem 3rem 2.5rem;
+  padding: 3rem 2.5rem 3rem 2.5rem;
   max-width: 600px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-    gap: 2.2rem;
+  gap: 2.2rem;
 }
 .quiz__overskrift {
   color: #cc0000;
@@ -835,6 +835,12 @@ details[open] .faq-section__icon {
   margin-bottom: 10px;
   text-align: center;
 }
+
+.quiz__intro {
+  text-align: left; 
+  margin: 1rem 0;
+}
+
 .quiz__cta {
   color: #cc0000;
   border: 2px solid #cc0000;
@@ -845,6 +851,8 @@ details[open] .faq-section__icon {
   font-weight: 700;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
+  display:flex; 
+  justify-content:center;
 }
 .quiz__cta:hover {
   background: #cc0000;
@@ -1222,7 +1230,7 @@ details[open] .faq-section__icon {
     border-radius: 10px;
     box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
     gap: 1.2rem;
-    text-align: center;
+    text-align: left;
     padding: 2rem 1.2rem;
 }
 .omos-roller__kort-overskrift {
@@ -1230,6 +1238,7 @@ details[open] .faq-section__icon {
     font-size: 1.25rem;
     color: #cc0000;
     margin: 0 0 0.2rem 0;
+    text-align: center;
 }
 .omos-roller__kort-afdeling {
     font-weight: 400;
@@ -1338,6 +1347,13 @@ details[open] .faq-section__icon {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.omos-video__iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 0;
+  border-radius: 12px;
+  display: block;
 }
 .omos-video__placeholder {
     width: 100%;
