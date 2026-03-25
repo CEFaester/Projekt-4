@@ -393,6 +393,7 @@ footer {
   max-width: 900px;
   margin: 0 auto;
 }
+
 .forside-anmeldelser__karousel {
   display: flex;
   overflow-x: auto;
