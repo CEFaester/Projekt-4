@@ -531,13 +531,23 @@ footer {
 
 .forside-bund__knap {
   margin-top: auto;
-  width: 80%;
-  padding: .5rem .5rem .5rem .5rem;
+  width: auto;
+  padding: 0.7rem 1.5rem;
   background-color: #007F24;
   color: #fff;
   border: none;
   display: inline-block;
   text-decoration: none;
+  border-radius: 6px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.forside-bund__knap:hover {
+  background: #145c32;
 }
 
 /* =========================================
@@ -1372,7 +1382,7 @@ details[open] .faq-section__icon {
 .omos-video__cta {
     font-weight: 700;
     font-size: 0.8125rem;
-    background: #198754;
+    background: #007F24;
     color: #fff;
     border: none;
     border-radius: 6px;
@@ -1414,18 +1424,18 @@ details[open] .faq-section__icon {
     display: block;
 }
 .omos-hero__overlay {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   min-height: 160px;
   padding: 24px 16px;
   background: rgba(179, 179, 179, 0.5);
-    color: #fff;
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-    text-align: left;
+  text-align: left;
 }
 .omos-hero__overskrift {
     font-weight: 700;
