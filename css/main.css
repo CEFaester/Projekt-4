@@ -1208,6 +1208,13 @@ details[open] .faq-section__icon {
 .omos-roller {
     background: var(--color-bg);
     padding: 2.5rem 1rem 2.5rem 1rem;
+
+    width: 100vw;
+    max-width: none;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    box-sizing: border-box;
 }
 .omos-roller__container {
     max-width: 900px;
@@ -1367,6 +1374,13 @@ details[open] .faq-section__icon {
     border-top: 1px solid var(--color-text);
     border-bottom: 1px solid var(--color-text);
     box-shadow: 0 4px 12px 0 var(--overlay-shadow);
+
+    width: 100vw;
+    max-width: none;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    box-sizing: border-box;
 }
 .omos-video__container {
     max-width: 500px;
@@ -1402,18 +1416,19 @@ details[open] .faq-section__icon {
   width: 100%;
   aspect-ratio: 16/9;
   border: 0;
-  border-radius: 12px;
+  border-radius: 6px;
   display: block;
 }
 .omos-video__placeholder {
     width: 100%;
     aspect-ratio: 16/9;
     background: var(--color-light-green);
-    border-radius: 12px;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .omos-video__placeholder-text {
     color: var(--color-text);
     font-size: 1rem;
