@@ -1452,7 +1452,7 @@ details[open] .faq-section__icon {
     cursor: pointer;
     transition: background 0.2s;
     margin-top: 0.5rem;
-    width: 100%;
+    width: 80%;
     max-width: 320px;
     font-family: "Nunito", sans-serif;
     display: inline-block;
