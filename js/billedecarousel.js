@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Frivillig quizzen",
       text: "I tvivl om hvilken rolle du kunne have?",
-      img: "img/sind__events__coffee.webp",
+      img: "assets/sind__events__coffee.webp",
       buttons: [
         { label: "Bliv Frivillig", link: "blivfrivillig.html", type: "primary" },
         { label: "Tag frivillig quizzen her", link: "#", type: "secondary" }
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Walk and talk",
       text: "Vi går snart, skal du med?",
-      img: "img/sind__events__walkAndTalk.webp",
+      img: "assets/sind__events__walkAndTalk.webp",
       buttons: [
         { label: "Bliv Frivillig", link: "blivfrivillig.html", type: "primary" },
         { label: "Læs mere", link: "#", type: "secondary" }
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Få erfaring. Mød nye mennesker. Gør en forskel.",
       text: "Uanset om du kommer for fællesskabet eller fagligheden, er der plads til dig.",
-      img: "img/sind__forside__img.webp",
+      img: "assets/sind__forside__img.webp",
       buttons: [
         { label: "Bliv Frivillig", link: "blivfrivillig.html", type: "primary" },
         { label: "Kom og mød os", link: "#", type: "secondary" }
